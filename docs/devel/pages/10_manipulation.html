@@ -1076,7 +1076,7 @@ document.addEventListener("click", function (event) {
 <span></span>
 <span><span class="co"># view new variable</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">tse</span><span class="op">$</span><span class="va">NewVariable</span><span class="op">)</span></span>
-<span><span class="co">##  [1] 0.887738 0.008204 0.957008 0.349641 0.169341 0.366810</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##  [1] 0.02003 0.14957 0.67493 0.71719 0.39297 0.36802</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="merge-data" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="merge-data">
 <span class="header-section-number">2.3</span> Merge data</h2>
@@ -1112,7 +1112,7 @@ document.addEventListener("click", function (event) {
 </div>
 <div class="cell" data-layout-align="center" data-hash="10_manipulation_cache/html/merge3_2c70f3f6508f52a913c8e14d215d6b4c">
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Left join preserves all rows of the 1st object</span></span>
-<span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu">mia</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/mia/man/mergeSEs.html">left_join</a></span><span class="op">(</span><span class="va">tse1</span>, <span class="va">tse4</span>, missing_values <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu">mia</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/mia/man/deprecate.html">left_join</a></span><span class="op">(</span><span class="va">tse1</span>, <span class="va">tse4</span>, missing_values <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="va">tse</span></span>
 <span><span class="co">##  class: TreeSummarizedExperiment </span></span>
 <span><span class="co">##  dim: 19216 2 </span></span>
