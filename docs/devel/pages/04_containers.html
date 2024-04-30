@@ -384,7 +384,7 @@ div.csl-indent {
   <li><a href="#rowdata" id="toc-rowdata" class="nav-link" data-scroll-target="#rowdata"><span class="header-section-number">2.2.3</span> rowData</a></li>
   <li><a href="#rowtree" id="toc-rowtree" class="nav-link" data-scroll-target="#rowtree"><span class="header-section-number">2.2.4</span> rowTree</a></li>
   <li><a href="#sec-alt-exp" id="toc-sec-alt-exp" class="nav-link" data-scroll-target="#sec-alt-exp"><span class="header-section-number">2.2.5</span> Alternative experiments</a></li>
-  <li><a href="#sec-mae" id="toc-sec-mae" class="nav-link" data-scroll-target="#sec-mae"><span class="header-section-number">2.2.6</span> MultiAssayExperiments</a></li>
+  <li><a href="#sec-mae" id="toc-sec-mae" class="nav-link" data-scroll-target="#sec-mae"><span class="header-section-number">2.2.6</span> MAEs</a></li>
   </ul>
 </li>
   <li>
@@ -402,8 +402,8 @@ div.csl-indent {
   <ul class="collapse">
 <li><a href="#s-workflow" id="toc-s-workflow" class="nav-link" data-scroll-target="#s-workflow"><span class="header-section-number">2.4.1</span> 16S workflow</a></li>
   <li><a href="#sec-import-from-file" id="toc-sec-import-from-file" class="nav-link" data-scroll-target="#sec-import-from-file"><span class="header-section-number">2.4.2</span> Import from external files</a></li>
-  <li><a href="#constructing-treesummarizedexperiment" id="toc-constructing-treesummarizedexperiment" class="nav-link" data-scroll-target="#constructing-treesummarizedexperiment"><span class="header-section-number">2.4.3</span> Constructing TreeSummarizedExperiment</a></li>
-  <li><a href="#constructing-multiassayexperiment" id="toc-constructing-multiassayexperiment" class="nav-link" data-scroll-target="#constructing-multiassayexperiment"><span class="header-section-number">2.4.4</span> Constructing MultiAssayExperiment</a></li>
+  <li><a href="#constructing-treese" id="toc-constructing-treese" class="nav-link" data-scroll-target="#constructing-treese"><span class="header-section-number">2.4.3</span> Constructing TreeSE</a></li>
+  <li><a href="#constructing-mae" id="toc-constructing-mae" class="nav-link" data-scroll-target="#constructing-mae"><span class="header-section-number">2.4.4</span> Constructing MAE</a></li>
   <li><a href="#import-functions-for-standard-formats" id="toc-import-functions-for-standard-formats" class="nav-link" data-scroll-target="#import-functions-for-standard-formats"><span class="header-section-number">2.4.5</span> Import functions for standard formats</a></li>
   <li><a href="#conversions-between-data-formats-in-r" id="toc-conversions-between-data-formats-in-r" class="nav-link" data-scroll-target="#conversions-between-data-formats-in-r"><span class="header-section-number">2.4.6</span> Conversions between data formats in R</a></li>
   </ul>
@@ -461,7 +461,7 @@ document.addEventListener("click", function (event) {
 </div>
 <section id="data-science-framework" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="data-science-framework">
 <span class="header-section-number">2.1</span> Data science framework</h2>
-<p>The building blocks of the framework are <strong>data container</strong> (SummarizedExperiment and its derivatives), <strong>packages</strong> from various developers using the TreeSE container, open <strong>demonstration data sets</strong>, in a separate chapter <a href="#sec-example-data"><span>Section&nbsp;2.3</span></a>, and <strong>online tutorials</strong> including this online book as well as the various package vignettes and other materials.</p>
+<p>The building blocks of the framework are <strong>data container</strong> (SummarizedExperiment and its derivatives), <strong>packages</strong> from various developers using the <code>TreeSE</code> container, open <strong>demonstration data sets</strong>, in a separate chapter <a href="#sec-example-data"><span>Section&nbsp;2.3</span></a>, and <strong>online tutorials</strong> including this online book as well as the various package vignettes and other materials.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-1_aaccf3e24fc8ddc56db1b03d48a9c207">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -478,8 +478,8 @@ Morgan, Martin, Valerie Obenchain, Jim Hester, and Hervé Pagès. 2020. <em>Summ
 </div><div id="ref-R_TreeSummarizedExperiment" class="csl-entry" role="listitem">
 Huang, Ruizhu. 2020. <em>TreeSummarizedExperiment: A S4 Class for Data with Tree Structures</em>.
 </div></div><p>[<code>TreeSummarizedExperiment</code>] (<code>TreeSE</code>) <span class="citation" data-cites="R_TreeSummarizedExperiment">(<a href="#ref-R_TreeSummarizedExperiment" role="doc-biblioref">Huang 2020</a>)</span> was developed as an extension to incorporate hierarchical information (such as phylogenetic trees and sample hierarchies) and reference sequences.</p>
-<p>[<code>MultiAssayExperiment</code>] (<code>MAE</code>) <span class="citation" data-cites="Ramos2017">(<a href="#ref-Ramos2017" role="doc-biblioref">Ramos et al. 2017</a>)</span> provides an organized way to bind several different data containers together in a single object. For example, we can bind microbiome data (in <code>TreeSE</code> container) with metabolomic profiling data (in <code>SE</code>) container, with (partially) shared sample metadata. This is convenient and robust for instance in subsetting and other data manipulation tasks. Microbiome data can be part of multiomics experiments and analysis strategies. We highlight how the methods used througout in this book relate to this data framework by using the <code>TreeSummarizedExperiment</code>, <code>MultiAssayExperiment</code>, and classes beyond.</p>
-<div class="no-row-height column-margin column-container"></div><p>This section provides an introductions to these data containers. In microbiome data science, these containers link taxonomic abundance tables with rich side information on the features and samples. Taxonomic abundance data can be obtained by 16S rRNA amplicon or metagenomic sequencing, phylogenetic microarrays, or by other means. Many microbiome experiments include multiple versions and types of data generated independently or derived from each other through transformation or agglomeration. We start by providing recommendations on how to represent different varieties of multi-table data within the <code>TreeSummarizedExperiment</code> class.</p>
+<p>[<code>MultiAssayExperiment</code>] (<code>MAE</code>) <span class="citation" data-cites="Ramos2017">(<a href="#ref-Ramos2017" role="doc-biblioref">Ramos et al. 2017</a>)</span> provides an organized way to bind several different data containers together in a single object. For example, we can bind microbiome data (in <code>TreeSE</code> container) with metabolomic profiling data (in <code>SE</code>) container, with (partially) shared sample metadata. This is convenient and robust for instance in subsetting and other data manipulation tasks. Microbiome data can be part of multiomics experiments and analysis strategies. We highlight how the methods used througout in this book relate to this data framework by using the <code>TreeSE</code>, <code>MAE</code>, and classes beyond.</p>
+<div class="no-row-height column-margin column-container"></div><p>This section provides an introductions to these data containers. In microbiome data science, these containers link taxonomic abundance tables with rich side information on the features and samples. Taxonomic abundance data can be obtained by 16S rRNA amplicon or metagenomic sequencing, phylogenetic microarrays, or by other means. Many microbiome experiments include multiple versions and types of data generated independently or derived from each other through transformation or agglomeration. We start by providing recommendations on how to represent different varieties of multi-table data within the <code>TreeSE</code> class.</p>
 <p>The options and recommendations are summarized in <a href="#tbl-options">Table&nbsp;<span>2.1</span></a>.</p>
 <section id="sec-assay-slot" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="sec-assay-slot">
 <span class="header-section-number">2.2.1</span> Assay data</h3>
@@ -605,7 +605,7 @@ Huang, Ruizhu. 2020. <em>TreeSummarizedExperiment: A S4 Class for Data with Tree
 </div>
 </section><section id="rowtree" class="level3" data-number="2.2.4"><h3 data-number="2.2.4" class="anchored" data-anchor-id="rowtree">
 <span class="header-section-number">2.2.4</span> rowTree</h3>
-<p>Phylogenetic trees also play an important role in the microbiome field. The <code>TreeSummarizedExperiment</code> class can keep track of features and node relations via two functions, <code>rowTree</code> and <code>rowLinks</code>.</p>
+<p>Phylogenetic trees also play an important role in the microbiome field. The <code>TreeSE</code> class can keep track of features and node relations via two functions, <code>rowTree</code> and <code>rowLinks</code>.</p>
 <p>A tree can be accessed via <code>rowTree</code> as <code>phylo</code> object.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/rowtree_ca3071817173b76d059af984cb8e46d1">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-accessor.html">rowTree</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span>
@@ -644,10 +644,10 @@ Huang, Ruizhu. 2020. <em>TreeSummarizedExperiment: A S4 Class for Data with Tree
 <p>This can come into play, for instance, when one has taxonomic abundance profiles quantified with different measurement technologies, such as phylogenetic microarrays, amplicon sequencing, or metagenomic sequencing. Another common use case is including abundance tables for different taxonomic ranks. Such alternative experiments concerning the same set of samples can be stored as</p>
 <ol type="1">
 <li>Separate <em>assays</em> assuming that the taxonomic information can be mapped between features directly 1:1; or</li>
-<li>Data in the <em>altExp</em> slot of the <code>TreeSummarizedExperiment</code>, if the feature dimensions differ. Each element of the <em>altExp</em> slot is a <code>SummarizedExperiment</code> or an object from a derived class with independent feature data.</li>
+<li>Data in the <em>altExp</em> slot of the <code>TreeSE</code>, if the feature dimensions differ. Each element of the <em>altExp</em> slot is a <code>SE</code> or an object from a derived class with independent feature data.</li>
 </ol>
 <p>The following shows how to store taxonomic abundance tables agglomerated at different taxonomic levels. However, the data could as well originate from entirely different measurement sources as long as the samples match.</p>
-<p>Let us first agglomerate the data to Phylum level. This yields a new TreeSE data object.</p>
+<p>Let us first agglomerate the data to Phylum level. This yields a new <code>TreeSE</code> data object.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/altexp_agglomerate_60125e0c22b699bc15a8e785d307f23f">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse_phylum</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/agglomerate-methods.html">mergeFeaturesByRank</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"Phylum"</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span><span class="co"># Both have the same number of columns (samples)</span></span>
@@ -690,13 +690,13 @@ Huang, Ruizhu. 2020. <em>TreeSummarizedExperiment: A S4 Class for Data with Tree
 <div class="no-row-height column-margin column-container"><div id="ref-R_SingleCellExperiment" class="csl-entry" role="listitem">
 Lun, Aaron, and Davide Risso. 2020. <em>SingleCellExperiment: S4 Classes for Single Cell Data</em>.
 </div></div></section><section id="sec-mae" class="level3 page-columns page-full" data-number="2.2.6"><h3 data-number="2.2.6" class="anchored" data-anchor-id="sec-mae">
-<span class="header-section-number">2.2.6</span> MultiAssayExperiments</h3>
-<p><em><strong>Multiple experiments</strong></em> relate to complementary measurement types, such as transcriptomic or metabolomic profiling of the microbiome or the host. Multiple experiments can be represented using the same options as alternative experiments, or by using the <code>MultiAssayExperiment</code> class <span class="citation" data-cites="Ramos2017">(<a href="#ref-Ramos2017" role="doc-biblioref">Ramos et al. 2017</a>)</span>. Depending on how the datasets relate to each other the data can be stored as:</p>
+<span class="header-section-number">2.2.6</span> MAEs</h3>
+<p><em><strong>Multiple experiments</strong></em> relate to complementary measurement types, such as transcriptomic or metabolomic profiling of the microbiome or the host. Multiple experiments can be represented using the same options as alternative experiments, or by using the <code>MAE</code> class <span class="citation" data-cites="Ramos2017">(<a href="#ref-Ramos2017" role="doc-biblioref">Ramos et al. 2017</a>)</span>. Depending on how the datasets relate to each other the data can be stored as:</p>
 <div class="no-row-height column-margin column-container"><div id="ref-Ramos2017" class="csl-entry" role="listitem">
 Ramos, Marcel, Lucas Schiffer, Angela Re, Rimsha Azhar, Azfar Basunia, Carmen Rodriguez Cabrera, Tiffany Chan, et al. 2017. <span>“Software for the Integration of Multiomics Experiments in Bioconductor.”</span> <em>Cancer Research</em>. <a href="https://doi.org/10.1158/0008-5472.CAN-17-0344">https://doi.org/10.1158/0008-5472.CAN-17-0344</a>.
 </div></div><ol type="1">
 <li>Separate <em>altExp</em> if the samples can be matched directly 1:1; or</li>
-<li>As <code>MultiAssayExperiment</code> objects, in which the connections between samples are defined through a <code>sampleMap</code>. Each element on the <code>experimentsList</code> of an <code>MultiAssayExperiment</code> is <code>matrix</code> or <code>matrix</code>-like objects, including <code>SummarizedExperiment</code> objects, and the number of samples can differ between the elements.</li>
+<li>As <code>MAE</code> objects, in which the connections between samples are defined through a <code>sampleMap</code>. Each element on the <code>experimentsList</code> of an <code>MAE</code> is <code>matrix</code> or <code>matrix</code>-like objects, including <code>SE</code> objects, and the number of samples can differ between the elements.</li>
 </ol>
 <!--
 
@@ -710,7 +710,7 @@ Ramos, Marcel, Lucas Schiffer, Angela Re, Rimsha Azhar, Azfar Basunia, Carmen Ro
 --><p>For information have a look at the <a href="https://bioconductor.org/packages/release/bioc/vignettes/MultiAssayExperiment/inst/doc/MultiAssayExperiment.html">intro vignette</a> of the <code>MultiAssayExperiment</code> package.</p>
 <div id="tbl-options" class="anchored">
 <table class="table">
-<caption>Table&nbsp;2.1: <strong>Recommended options for storing multiple data tables in microbiome studies</strong> The <em>assays</em> are best suited for data transformations (one-to-one match between samples and columns across the assays). The <em>alternative experiments</em> are particularly suitable for alternative versions of the data that are of same type but may have a different number of features (e.g.&nbsp;taxonomic groups); this is for instance the case with taxonomic abundance tables agglomerated at different levels (e.g.&nbsp;genus vs.&nbsp;phyla) or alternative profiling technologies (e.g.&nbsp;amplicon sequencing vs.&nbsp;shallow shotgun metagenomics). For alternative experiments one-to-one match between samples (cols) is libraryd but the alternative experiment tables can have different numbers of features (rows). Finally, elements of the <em>MultiAssayExperiment</em> provide the most flexible way to incorporate multi-omic data tables with flexible numbers of samples and features. We recommend these conventions as the basis for methods development and application in microbiome studies.</caption>
+<caption>Table&nbsp;2.1: <strong>Recommended options for storing multiple data tables in microbiome studies</strong> The <em>assays</em> are best suited for data transformations (one-to-one match between samples and columns across the assays). The <em>alternative experiments</em> are particularly suitable for alternative versions of the data that are of same type but may have a different number of features (e.g.&nbsp;taxonomic groups); this is for instance the case with taxonomic abundance tables agglomerated at different levels (e.g.&nbsp;genus vs.&nbsp;phyla) or alternative profiling technologies (e.g.&nbsp;amplicon sequencing vs.&nbsp;shallow shotgun metagenomics). For alternative experiments one-to-one match between samples (cols) is libraryd but the alternative experiment tables can have different numbers of features (rows). Finally, elements of the <em>MAE</em> provide the most flexible way to incorporate multi-omic data tables with flexible numbers of samples and features. We recommend these conventions as the basis for methods development and application in microbiome studies.</caption>
 <thead><tr class="header">
 <th style="text-align: right;">Option</th>
 <th>Rows (features)</th>
@@ -744,7 +744,7 @@ Ramos, Marcel, Lucas Schiffer, Angela Re, Rimsha Azhar, Azfar Basunia, Carmen Ro
 <p>Open demonstration data for testing and benchmarking purposes is available from multiple locations. This chapter introduces some options. The other chapters of this book provide ample examples about the use of the data.</p>
 <section id="sec-package-data" class="level3 page-columns page-full" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="sec-package-data">
 <span class="header-section-number">2.3.1</span> Package data</h3>
-<p>The <code>mia</code> R package contains example datasets that are direct conversions from the alternative <code>phyloseq</code> container to the <code>TreeSummarizedExperiment</code> container.</p>
+<p>The <code>mia</code> R package contains example datasets that are direct conversions from the alternative <code>phyloseq</code> container to the <code>TreeSE</code> container.</p>
 <p>List the <a href="https://microbiome.github.io/mia/reference/mia-datasets.html">available datasets</a> in the <code>mia</code> package:</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-8_d9c3731af4e7e2cf98b71e514dec264d">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
@@ -802,7 +802,7 @@ Lahti, Leo, Felix G. M. Ernst, and Sudarshan Shetty. 2021. <em>microbiomeDataSet
 <span><span class="co">##  8        SongQAData</span></span>
 <span><span class="co">##  9   SprockettTHData</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>All data are downloaded from ExperimentHub and cached for local re-use. Check the <a href="https://microbiome.github.io/microbiomeDataSets/reference/index.html">man pages of each function</a> for a detailed documentation of the data contents and references. Let us retrieve a <em><a href="https://bioconductor.org/packages/3.19/MultiAssayExperiment">MultiAssayExperiment</a></em> dataset:</p>
+<p>All data are downloaded from ExperimentHub and cached for local re-use. Check the <a href="https://microbiome.github.io/microbiomeDataSets/reference/index.html">man pages of each function</a> for a detailed documentation of the data contents and references. Let us retrieve a <em><a href="https://bioconductor.org/packages/3.19/MAE">MAE</a></em> dataset:</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-11_37c961e78120486d1c595efe1b3b7554">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># mae &lt;- HintikkaXOData()</span></span>
 <span><span class="co"># Since HintikkaXOData is now added to mia, we can load it directly from there</span></span>
@@ -810,10 +810,10 @@ Lahti, Leo, Felix G. M. Ernst, and Sudarshan Shetty. 2021. <em>microbiomeDataSet
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">HintikkaXOData</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">mae</span> <span class="op">&lt;-</span> <span class="va">HintikkaXOData</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Data is available in <em><a href="https://bioconductor.org/packages/3.19/SummarizedExperiment">SummarizedExperiment</a></em>, <code>r Biocpkg("TreeSummarizedExperiment")</code> and <code>r Biocpkg("MultiAssayExperiment")</code> data containers; see the separate page on <a href="../pages/23_multi-assay_analyses.html">alternative containers</a> for more details.</p>
+<p>Data is available in <em><a href="https://bioconductor.org/packages/3.19/SE">SE</a></em>, <code>r Biocpkg("TreeSE")</code> and <code>r Biocpkg("MAE")</code> data containers; see the separate page on <a href="../pages/23_multi-assay_analyses.html">alternative containers</a> for more details.</p>
 </section><section id="curated-metagenomic-data" class="level3 page-columns page-full" data-number="2.3.3"><h3 data-number="2.3.3" class="anchored" data-anchor-id="curated-metagenomic-data">
 <span class="header-section-number">2.3.3</span> Curated metagenomic data</h3>
-<p><a href="https://bioconductor.org/packages/release/data/experiment/html/curatedMetagenomicData.html">curatedMetagenomicData</a> is a large collection of curated human microbiome datasets, provided as <code>(Tree)SummarizedExperiment</code> objects <span class="citation" data-cites="Pasolli2017">(<a href="#ref-Pasolli2017" role="doc-biblioref">E 2017</a>)</span>. The resource provides curated human microbiome data including gene families, marker abundance, marker presence, pathway abundance, pathway coverage, and relative abundance for samples from different body sites. See the package homepage for more details on data availability and access.</p>
+<p><a href="https://bioconductor.org/packages/release/data/experiment/html/curatedMetagenomicData.html">curatedMetagenomicData</a> is a large collection of curated human microbiome datasets, provided as <code>TreeSE</code> objects <span class="citation" data-cites="Pasolli2017">(<a href="#ref-Pasolli2017" role="doc-biblioref">E 2017</a>)</span>. The resource provides curated human microbiome data including gene families, marker abundance, marker presence, pathway abundance, pathway coverage, and relative abundance for samples from different body sites. See the package homepage for more details on data availability and access.</p>
 <div class="no-row-height column-margin column-container"><div id="ref-Pasolli2017" class="csl-entry" role="listitem">
 E, Pasolli. 2017. <span>“Accessible, Curated Metagenomic Data Through ExperimentHub.”</span> <em>Nature Methods</em> 14 (11): 1023–24. <a href="https://www.nature.com/articles/nmeth.4468">https://www.nature.com/articles/nmeth.4468</a>.
 </div><div id="ref-Vatanen2016" class="csl-entry" role="listitem">
@@ -830,11 +830,11 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">MicroBioMap</span><span class="op">)</span></span>
 <span><span class="va">cpd</span> <span class="op">&lt;-</span> <span class="fu">getCompendium</span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This returns a TreeSummarizedExperiment object. Currently, the “tree” part of the TreeSummarizedExperiment is not populated, but that is on the roadmap<span class="citation" data-cites="compendiumpackage">(<a href="#ref-compendiumpackage" role="doc-biblioref"><strong>compendiumpackage?</strong></a>)</span>.</p>
+<p>This returns a <code>TreeSE</code> object. Currently, the “tree” part of the <code>TreeSE</code> is not populated, but that is on the roadmap<span class="citation" data-cites="compendiumpackage">(<a href="#ref-compendiumpackage" role="doc-biblioref"><strong>compendiumpackage?</strong></a>)</span>.</p>
 <p>After loading the compendium, you will have immediate access to nearly 170,000 microbiome samples of publicly available 16S rRNA amplicon sequencing data, all processed using the same pipeline and reference database. For more use examples in R/Bioconductor, see the <a href="https://seandavi.github.io/MicroBioMap/articles/overview.html">MicroBioMap vignette</a>.</p>
 </section><section id="other-data-sources" class="level3" data-number="2.3.5"><h3 data-number="2.3.5" class="anchored" data-anchor-id="other-data-sources">
 <span class="header-section-number">2.3.5</span> Other data sources</h3>
-<p>The current collections provide access to vast microbiome data resources. The output has to be converted into TreeSE/MAE separately.</p>
+<p>The current collections provide access to vast microbiome data resources. The output has to be converted into <code>TreeSE/MAE</code> separately.</p>
 <ul>
 <li>
 <a href="https://github.com/beadyallen/MGnifyR">MGnifyR</a> provides access to <a href="https://www.ebi.ac.uk/metagenomics/">EBI/MGnify</a>
@@ -850,7 +850,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <section id="s-workflow" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="s-workflow">
 <span class="header-section-number">2.4.1</span> 16S workflow</h3>
 <p>Result of amplicon sequencing is a large number of files that include all the sequences that were read from samples. Those sequences need to be matched with taxa. Additionally, we need to know how many times each taxa were found from each sample.</p>
-<p>There are several algorithms to do that, and DADA2 is one of the most common. You can find DADA2 pipeline tutorial, for example, <a href="https://benjjneb.github.io/dada2/tutorial.html">here</a>. After the DADA2 portion of the tutorial is completed, the data is stored into <em>phyloseq</em> object (Bonus: Handoff to phyloseq). To store the data to <em>TreeSummarizedExperiment</em>, follow the example below.</p>
+<p>There are several algorithms to do that, and DADA2 is one of the most common. You can find DADA2 pipeline tutorial, for example, <a href="https://benjjneb.github.io/dada2/tutorial.html">here</a>. After the DADA2 portion of the tutorial is completed, the data is stored into <em>phyloseq</em> object (Bonus: Handoff to phyloseq). To store the data to <em>TreeSE</em>, follow the example below.</p>
 <p>You can find full workflow script without further explanations and comments from <a href="https://github.com/microbiome/OMA/blob/master/dada2_workflow.Rmd">here</a></p>
 <p>Load required packages.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/dada2_2_7bbe168e5707b57a5455949d4220660a">
@@ -918,7 +918,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 </div>
 </section><section id="sec-import-from-file" class="level3" data-number="2.4.2"><h3 data-number="2.4.2" class="anchored" data-anchor-id="sec-import-from-file">
 <span class="header-section-number">2.4.2</span> Import from external files</h3>
-<p>Microbiome (taxonomic) profiling data is commonly distributed in various file formats. You can import such external data files as a (Tree)SummarizedExperiment object, but the details depend on the file format. Here, we provide examples for common formats. Some datasets and raw files to learn how to import raw data and construct TreeSE/MAE containers are available in the <a href="https://github.com/microbiome/data">microbiome data repository</a>.</p>
+<p>Microbiome (taxonomic) profiling data is commonly distributed in various file formats. You can import such external data files as a <code>TreeSE</code> object, but the details depend on the file format. Here, we provide examples for common formats. Some datasets and raw files to learn how to import raw data and construct <code>TreeSE/MAE</code> containers are available in the <a href="https://github.com/microbiome/data">microbiome data repository</a>.</p>
 <section id="csv-import" class="level4" data-number="2.4.2.1"><h4 data-number="2.4.2.1" class="anchored" data-anchor-id="csv-import">
 <span class="header-section-number">2.4.2.1</span> CSV import</h4>
 <p><strong>CSV data tables</strong> can be imported with the standard R functions, then converted to the desired format. For detailed examples, you can check the <a href="https://bioconductor.org/help/course-materials/2019/BSS2019/04_Practical_CoreApproachesInBioconductor.html">Bioconductor course material</a> by Martin Morgan. You can also check the <a href="https://github.com/microbiome/OMA/tree/master/data">example files</a> and construct your own CSV files accordingly.</p>
@@ -973,9 +973,9 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <span><span class="fu"><a href="https://rdrr.io/r/base/class.html">class</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span> <span class="co"># should be a numeric matrix</span></span>
 <span><span class="co">##  [1] "matrix" "array"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="constructing-treesummarizedexperiment" class="level3" data-number="2.4.3"><h3 data-number="2.4.3" class="anchored" data-anchor-id="constructing-treesummarizedexperiment">
-<span class="header-section-number">2.4.3</span> Constructing TreeSummarizedExperiment</h3>
-<p>Now let us create the TreeSE object from the input data tables. Here we also convert the data objects in their preferred formats:</p>
+</section></section><section id="constructing-treese" class="level3" data-number="2.4.3"><h3 data-number="2.4.3" class="anchored" data-anchor-id="constructing-treese">
+<span class="header-section-number">2.4.3</span> Constructing TreeSE</h3>
+<p>Now let us create the <code>TreeSE</code> object from the input data tables. Here we also convert the data objects in their preferred formats:</p>
 <ul>
 <li>counts –&gt; numeric matrix</li>
 <li>rowData –&gt; DataFrame</li>
@@ -1006,10 +1006,10 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <span><span class="co">##  colLinks: NULL</span></span>
 <span><span class="co">##  colTree: NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Now you should have a ready-made TreeSE data object that can be used in downstream analyses.</p>
-</section><section id="constructing-multiassayexperiment" class="level3" data-number="2.4.4"><h3 data-number="2.4.4" class="anchored" data-anchor-id="constructing-multiassayexperiment">
-<span class="header-section-number">2.4.4</span> Constructing MultiAssayExperiment</h3>
-<p>To construct a <em>MultiAssayExperiment</em> object, just combine multiple <em>TreeSE</em> data containers. Here we import metabolite data from the same study.</p>
+<p>Now you should have a ready-made <code>TreeSE</code> data object that can be used in downstream analyses.</p>
+</section><section id="constructing-mae" class="level3" data-number="2.4.4"><h3 data-number="2.4.4" class="anchored" data-anchor-id="constructing-mae">
+<span class="header-section-number">2.4.4</span> Constructing MAE</h3>
+<p>To construct a <em>MAE</em> object, just combine multiple <em>TreeSE</em> data containers. Here we import metabolite data from the same study.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/importingcsv4_73962e9c3467680bd3934c87e64dbb0c">
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">count_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"assay_metabolites.csv"</span>, package <span class="op">=</span> <span class="st">"OMA"</span><span class="op">)</span></span>
 <span><span class="va">sample_file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"coldata.csv"</span>, package <span class="op">=</span> <span class="st">"OMA"</span><span class="op">)</span></span>
@@ -1073,7 +1073,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 </ul>
 <section id="biom-import" class="level4" data-number="2.4.5.1"><h4 data-number="2.4.5.1" class="anchored" data-anchor-id="biom-import">
 <span class="header-section-number">2.4.5.1</span> Biom import</h4>
-<p>Here we show how <a href="https://biom-format.org/">Biom files</a> are imported into a TreeSE object using as an example Tengeler2020, which is further described in section <a href="#sec-tengeler-desc"><span>Section&nbsp;2.3.1.1</span></a>. This dataset consists of 3 files, which can be fetched or downloaded from <a href="https://github.com/microbiome/data/tree/main/Tengeler2020">this repository</a>:</p>
+<p>Here we show how <a href="https://biom-format.org/">Biom files</a> are imported into a <code>TreeSE</code> object using as an example Tengeler2020, which is further described in section <a href="#sec-tengeler-desc"><span>Section&nbsp;2.3.1.1</span></a>. This dataset consists of 3 files, which can be fetched or downloaded from <a href="https://github.com/microbiome/data/tree/main/Tengeler2020">this repository</a>:</p>
 <ul>
 <li>biom file: abundance table and taxonomy information</li>
 <li>csv file: sample metadata</li>
@@ -1085,7 +1085,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <span><span class="va">sample_meta_file_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Mapping_file_ADHD_aggregated.csv"</span>, package <span class="op">=</span> <span class="st">"OMA"</span><span class="op">)</span></span>
 <span><span class="va">tree_file_path</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"Data_humanization_phylo_aggregation.tre"</span>, package <span class="op">=</span> <span class="st">"OMA"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Now we can read in the biom file and convert it into a TreeSE object. In addition, we retrieve the rank names from the prefixes of the feature names and then remove them with the <code>rankFromPrefix</code> and <code>removeTaxaPrefixes</code> optional arguments.</p>
+<p>Now we can read in the biom file and convert it into a <code>TreeSE</code> object. In addition, we retrieve the rank names from the prefixes of the feature names and then remove them with the <code>rankFromPrefix</code> and <code>removeTaxaPrefixes</code> optional arguments.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-15_f66216ec8db43167df0ed87f3c03d550">
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span></span>
@@ -1201,8 +1201,8 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <span><span class="co">##  A21         ADHD    Cohort_2    ADHD_Cohort_2         A21</span></span>
 <span><span class="co">##  A23         ADHD    Cohort_2    ADHD_Cohort_2         A23</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Finally, we add a phylogenetic tree to the rowData slot. Such feature is available only in TreeSE objects. Similarly, Trees specifying the sample hierarchy can be stored in the colTree slot.</p>
-<p>Here, we read in the file containing the phylogenetic tree and insert it in corresponding slot of the TreeSE object.</p>
+<p>Finally, we add a phylogenetic tree to the rowData slot. Such feature is available only in <code>TreeSE</code> objects. Similarly, Trees specifying the sample hierarchy can be stored in the colTree slot.</p>
+<p>Here, we read in the file containing the phylogenetic tree and insert it in corresponding slot of the <code>TreeSE</code> object.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-22_e10de9aec133216f6ac9a4199eb48559">
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Reads the tree file</span></span>
 <span><span class="va">tree</span> <span class="op">&lt;-</span> <span class="fu">ape</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/read.tree.html">read.tree</a></span><span class="op">(</span><span class="va">tree_file_path</span><span class="op">)</span></span>
@@ -1234,7 +1234,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 </div>
 </section></section><section id="conversions-between-data-formats-in-r" class="level3" data-number="2.4.6"><h3 data-number="2.4.6" class="anchored" data-anchor-id="conversions-between-data-formats-in-r">
 <span class="header-section-number">2.4.6</span> Conversions between data formats in R</h3>
-<p>If the data has already been imported in R in another format, it can be readily converted into <code>TreeSummarizedExperiment</code>, as shown in our next example. Note that similar conversion functions to <code>TreeSummarizedExperiment</code> are available for multiple data formats via the <code>mia</code> package (see makeTreeSummarizedExperimentFrom* for phyloseq, Biom, and DADA2).</p>
+<p>If the data has already been imported in R in another format, it can be readily converted into <code>TreeSE</code>, as shown in our next example. Note that similar conversion functions to <code>TreeSE</code> are available for multiple data formats via the <code>mia</code> package (see makeTreeSummarizedExperimentFrom* for phyloseq, Biom, and DADA2).</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-24_63c57eb7967bac8913544b7c01e1b74e">
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span></span>
@@ -1268,7 +1268,7 @@ Vatanen, Tommi, Aleksandar D. Kostic, Eva d’Hennezel, Heli Siljander, Eric A. 
 <span><span class="co">##  colLinks: NULL</span></span>
 <span><span class="co">##  colTree: NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>We can also convert <code>TreeSummarizedExperiment</code> objects into <code>phyloseq</code> with respect to the shared components that are supported by both formats (i.e.&nbsp;taxonomic abundance table, sample metadata, taxonomic table, phylogenetic tree, sequence information). This is useful for instance when additional methods are available for <code>phyloseq</code>.</p>
+<p>We can also convert <code>TreeSE</code> objects into <code>phyloseq</code> with respect to the shared components that are supported by both formats (i.e.&nbsp;taxonomic abundance table, sample metadata, taxonomic table, phylogenetic tree, sequence information). This is useful for instance when additional methods are available for <code>phyloseq</code>.</p>
 <div class="cell" data-layout-align="center" data-hash="04_containers_cache/html/unnamed-chunk-26_619bdd909dafdffb603123346bc3acee">
 <div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># convert TSE to phyloseq</span></span>
 <span><span class="va">GlobalPatterns_phyloseq2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/makePhyloseqFromTreeSE.html">makePhyloseqFromTreeSummarizedExperiment</a></span><span class="op">(</span><span class="va">GlobalPatterns_TSE</span><span class="op">)</span> </span>
