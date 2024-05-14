@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Orchestrating Microbiome Analysis - 21&nbsp; Exercises</title>
 <style>
@@ -19,7 +19,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -77,7 +77,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -86,6 +92,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -96,19 +103,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/80_training.html">Training</a></li><li class="breadcrumb-item"><a href="../pages/98_exercises.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exercises</span></a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/80_training.html">Training</a></li><li class="breadcrumb-item"><a href="../pages/98_exercises.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exercises</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Orchestrating Microbiome Analysis</a> 
         <div class="sidebar-tools-main">
@@ -350,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
     </ul>
 </div>
-</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
@@ -444,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/80_training.html">Training</a></li><li class="breadcrumb-item"><a href="../pages/98_exercises.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exercises</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title"><span id="sec-exercises" class="quarto-section-identifier"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Exercises</span></span></h1>
 </div>
 
@@ -457,6 +464,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
   </div>
   
+
 
 </header><p>Here you can find assignments on different topics.</p>
 <p><strong>Tips for exercises:</strong></p>
@@ -579,7 +587,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Well done! You can now use an advanced feature of Quarto such as parameters. If you got stuck, <a href="https://quarto.org/docs/computations/parameters.html#knitr">here</a> you can find more information about parameter definition and usage.</p>
 </section></section></section><section id="data-containers-treese" class="level2" data-number="21.3"><h2 data-number="21.3" class="anchored" data-anchor-id="data-containers-treese">
 <span class="header-section-number">21.3</span> Data containers: TreeSE</h2>
-<p>TreeSE containers represent the working unit of the mia package. In the following exercises we learn how to construct, explore and work with them. A few demo datasets can be imported with mia and can be accessed as explained in chapter <a href="04_containers.html#sec-example-data"><span>Section&nbsp;2.3</span></a>.</p>
+<p>TreeSE containers represent the working unit of the mia package. In the following exercises we learn how to construct, explore and work with them. A few demo datasets can be imported with mia and can be accessed as explained in chapter <a href="04_containers.html#sec-example-data" class="quarto-xref"><span>Section 2.3</span></a>.</p>
 <section id="sec-construct-TreeSE" class="level3" data-number="21.3.1"><h3 data-number="21.3.1" class="anchored" data-anchor-id="sec-construct-TreeSE">
 <span class="header-section-number">21.3.1</span> Constructing a data object</h3>
 <p>Here we cover how to construct a TreeSE from CSV files, using the components of OKeefeDSData from the microbiomeDataSets package as an example dataset.</p>
@@ -587,7 +595,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Fetch or download the files in <a href="https://github.com/microbiome/data/tree/main/OKeefeDSData">this directory</a>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url_to_assay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/connections.html">url</a></span><span class="op">(</span><span class="st">"https://github.com/microbiome/data/raw/main/OKeefeDSData/okeefe_assay.csv"</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url_to_assay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/connections.html">url</a></span><span class="op">(</span><span class="st">"https://github.com/microbiome/data/raw/main/OKeefeDSData/okeefe_assay.csv"</span><span class="op">)</span></span>
 <span><span class="va">url_to_coldata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/connections.html">url</a></span><span class="op">(</span><span class="st">"https://github.com/microbiome/data/raw/main/OKeefeDSData/okeefe_coldata.csv"</span><span class="op">)</span></span>
 <span><span class="va">url_to_rowdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/connections.html">url</a></span><span class="op">(</span><span class="st">"https://github.com/microbiome/data/raw/main/OKeefeDSData/okeefe_rowdata.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -596,7 +604,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Read in the csv files with <code>read.csv</code> and store them into the variables <code>assays</code>, <code>rowdata</code> and <code>coldata</code>, respectively.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">okeefe_assay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">url_to_assay</span>, row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">okeefe_assay</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">url_to_assay</span>, row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="va">okeefe_coldata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">url_to_coldata</span>, row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="va">okeefe_rowdata</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="va">url_to_rowdata</span>, row.names <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -605,7 +613,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create a TreeSE from the individual components with <code>TreeSummarizedExperiment</code>. Note that the function requires three arguments: assays, rowData and colData, to which you can give the appropriate item.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-constructor.html">TreeSummarizedExperiment</a></span><span class="op">(</span>assays <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>counts <span class="op">=</span> <span class="va">okeefe_assay</span><span class="op">)</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-constructor.html">TreeSummarizedExperiment</a></span><span class="op">(</span>assays <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>counts <span class="op">=</span> <span class="va">okeefe_assay</span><span class="op">)</span>,</span>
 <span>                                colData <span class="op">=</span> <span class="va">okeefe_coldata</span>,</span>
 <span>                                rowData <span class="op">=</span> <span class="va">okeefe_rowdata</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -614,14 +622,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Check that importing is done correctly. E.g., choose random samples and features, and check that their values equal between raw files and TreeSE.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">okeefe_assay</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">okeefe_assay</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>Usefuls functions: DataFrame, TreeSummarizedExperiment, matrix, rownames, colnames, SimpleList</p>
 </section><section id="importing-data" class="level3" data-number="21.3.2"><h3 data-number="21.3.2" class="anchored" data-anchor-id="importing-data">
 <span class="header-section-number">21.3.2</span> Importing data</h3>
-<p>Raw data of different types can be imported as a TreeSE with a number of functions explained in chapter <a href="04_containers.html#sec-import-from-file"><span>Section&nbsp;2.4.2</span></a>. You can also check the <a href="https://microbiome.github.io/mia/reference/index.html">function reference in the mia package</a>.</p>
+<p>Raw data of different types can be imported as a TreeSE with a number of functions explained in chapter <a href="04_containers.html#sec-import-from-file" class="quarto-xref"><span>Section 2.4.2</span></a>. You can also check the <a href="https://microbiome.github.io/mia/reference/index.html">function reference in the mia package</a>.</p>
 <ol type="1">
 <li><p>Get familiar with the <a href="https://github.com/microbiome/data">microbiome data repository</a> and read the instructions in its <a href="https://github.com/microbiome/data#training-microbiome-datasets">README</a> to import and construct datasets from there.</p></li>
 <li><p>Import data from another format (functions: <a href="https://microbiome.github.io/mia/reference/loadFromMetaphlan.html">importMetaPhlAn</a> | <a href="https://microbiome.github.io/mia/reference/importMothur.html">importMothur</a> | <a href="https://microbiome.github.io/mia/reference/importQIIME2.html">importQIIME2</a> | <a href="https://microbiome.github.io/mia/reference/makeTreeSEFromBiom.html">makeTreeSummarizedExperimentFromBiom</a> | <a href="https://microbiome.github.io/mia/reference/makeTreeSEFromDADA2.html">makeTreeSummarizedExperimentFromDADA2</a> …)</p></li>
@@ -632,7 +640,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">GlobalPatterns</span>, package<span class="op">=</span><span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -641,21 +649,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Get a summary about the TreeSE with <code>summary</code>. What is the mean count across samples? How many features recur only once (singletons)?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
 <li>Check the dimensions of the TreeSE with <code>dim</code> or alternatively with <code>nrow</code> and <code>ncol</code>. How many samples and features are present?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/dim.html">dim</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>List sample and features names with <code>rownames</code> and <code>colnames</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -663,7 +671,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Check what information about samples and features is contained by the <code>colData</code> and <code>rowData</code> of the TreeSE with <code>names</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -676,7 +684,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">GlobalPatterns</span>, package<span class="op">=</span><span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -685,31 +693,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>List the names of all available assays with <code>assayNames</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assayNames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assayNames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
 <li>Fetch the list of assays with <code>assays</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assays</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assays</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Retrieve the first assay of the TreeSE with <code>assay</code>, where the second argument can be either the name or the index of the desired assay.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>,<span class="fl">1</span><span class="op">:</span><span class="fl">7</span><span class="op">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Well done! You can now locate and retrieve individual assays of a TreeSE. If you got stuck, you can refer to chapter <a href="04_containers.html#sec-assay-slot"><span>Section&nbsp;2.2.1</span></a> of this book.</p>
+<p>Well done! You can now locate and retrieve individual assays of a TreeSE. If you got stuck, you can refer to chapter <a href="04_containers.html#sec-assay-slot" class="quarto-xref"><span>Section 2.2.1</span></a> of this book.</p>
 </section><section id="sample-information" class="level3" data-number="21.3.5"><h3 data-number="21.3.5" class="anchored" data-anchor-id="sample-information">
 <span class="header-section-number">21.3.5</span> Sample information</h3>
 <ol type="1">
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"GlobalPatterns"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -718,21 +726,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Check the names of the samples with <code>colnames</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
 <li>List the information on samples available in colData with <code>names</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Visualize the colData with <code>View</code> and briefly look at the information stored in the different columns.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="5" type="1">
@@ -743,7 +751,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"GlobalPatterns"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -752,21 +760,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Check the names of the features with <code>rownames</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
 <li>List the information on features available in rowData with <code>names</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Visualize the rowData with <code>View</code> and briefly look at the information stored in the different columns.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">rowData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="5" type="1">
@@ -775,15 +783,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <strong>Extra</strong>: Create a hierarchy tree based on the taxonomy mappings with <code>addHierarchyTree</code> and display its content with <code>getHierarchyTree</code> and <code>ggtree</code>.</li>
 </ol>
-<p>If you got stuck, you can look up chapters <a href="10_manipulation.html"><span>Chapter&nbsp;3</span></a> and <a href="11_taxonomic_information.html#sec-fly-tree"><span>Section&nbsp;5.2.1</span></a> on how to pick specific abundances and generate row trees, respectively.</p>
+<p>If you got stuck, you can look up chapters <a href="10_manipulation.html" class="quarto-xref"><span>Chapter 3</span></a> and <a href="11_taxonomic_information.html#sec-fly-tree" class="quarto-xref"><span>Section 5.2.1</span></a> on how to pick specific abundances and generate row trees, respectively.</p>
 </section><section id="other-elements" class="level3" data-number="21.3.7"><h3 data-number="21.3.7" class="anchored" data-anchor-id="other-elements">
 <span class="header-section-number">21.3.7</span> Other elements</h3>
-<p>Extract some of the other TreeSE elements listed in chapter <a href="04_containers.html"><span>Chapter&nbsp;2</span></a>. However, such data are not always included.</p>
+<p>Extract some of the other TreeSE elements listed in chapter <a href="04_containers.html" class="quarto-xref"><span>Chapter 2</span></a>. However, such data are not always included.</p>
 <ol type="1">
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"GlobalPatterns"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -792,28 +800,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Fetch the metadata of the TreeSE. Is there any information available?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu">metadata</span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="fu">metadata</span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="3" type="1">
 <li>Access the phylogenetic tree with <code>rowTree</code>. How big is it in terms of tips and nodes. If you like you can visualize it with <code>ggtree</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-accessor.html">rowTree</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-accessor.html">rowTree</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Check if a sample tree is available with <code>colTree</code>, which is suitable for hierarchical or nested study designs.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-accessor.html">colTree</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/TreeSummarizedExperiment/man/TreeSummarizedExperiment-accessor.html">colTree</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="5" type="1">
 <li>If present, obtain the information on feature DNA sequences from the DNA sequence slot.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">$</span><span class="va">Barcode_full_length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">$</span><span class="va">Barcode_full_length</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section></section><section id="data-manipulation" class="level2" data-number="21.4"><h2 data-number="21.4" class="anchored" data-anchor-id="data-manipulation">
@@ -867,7 +875,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Import the mia package, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.<br>
 </li>
-<li>Transform the counts assay into relative abundances with <code>transformAssay</code> and store it into the TreeSE as an assay named <code>relabund</code> (see chapter <a href="11_taxonomic_information.html#sec-assay-transform"><span>Section&nbsp;5.4</span></a>).<br>
+<li>Transform the counts assay into relative abundances with <code>transformAssay</code> and store it into the TreeSE as an assay named <code>relabund</code> (see chapter <a href="11_taxonomic_information.html#sec-assay-transform" class="quarto-xref"><span>Section 5.4</span></a>).<br>
 </li>
 <li>Similarly, perform a clr transformation on the counts assay with a <code>pseudocount</code> of 1 and add it to the TreeSE as a new assay.<br>
 </li>
@@ -983,7 +991,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>
 <strong>Extra</strong>: Perform MDS again with <code>runMDS</code>, but this time use Jaccard dissimilarity. The distance metric to use can be defined with the optional argument <code>method</code>, choosing from the methods in <code><a href="https://rdrr.io/pkg/vegan/man/vegdist.html">?vegan::vegdist</a></code>. If you don’t want to overwrite the reducedDim object made in point 3, set <code>name</code> to a name of your choice. Visualize and compare it to the plot from point 4.</li>
 </ol>
-<p>Good job! You are now able to produce and visualize reduced dimensions of a TreeSE. <code>runMDS</code> is actually one of several algorithms for PCoA and dimensionality reduction, which you can find in section <a href="20_beta_diversity.html#sec-other-ord-methods"><span>Section&nbsp;7.2.2</span></a>.</p>
+<p>Good job! You are now able to produce and visualize reduced dimensions of a TreeSE. <code>runMDS</code> is actually one of several algorithms for PCoA and dimensionality reduction, which you can find in section <a href="20_beta_diversity.html#sec-other-ord-methods" class="quarto-xref"><span>Section 7.2.2</span></a>.</p>
 </section><section id="permanova-analysis" class="level3" data-number="21.7.4"><h3 data-number="21.7.4" class="anchored" data-anchor-id="permanova-analysis">
 <span class="header-section-number">21.7.4</span> PERMANOVA analysis</h3>
 <p>In this exercise we focus on studying the weight of variables on the microbiome composition. Significance of each variable on beta diversity is tested with PERMANOVA (point 4) and the homogeneity assumption is also be controlled with a PERMDISP2 analysis (point 5).</p>
@@ -1011,7 +1019,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Well done! You went through an RDA analysis followed by significance testing with PERMANOVA and BETADISPER2. In the next exercise we’ll go deeper quantify the contributions to beta diversity.</p>
 </section><section id="beta-diversity-analysis" class="level3" data-number="21.7.6"><h3 data-number="21.7.6" class="anchored" data-anchor-id="beta-diversity-analysis">
 <span class="header-section-number">21.7.6</span> Beta diversity analysis</h3>
-<p>This exercise prompts you to implement a workflow with distance-based RDA (dbRDA). You can refer to chapter <a href="20_beta_diversity.html#sec-dbrda-workflow"><span>Section&nbsp;7.4.1</span></a> for a step-by-step walkthrough, which may be simplified in the future.</p>
+<p>This exercise prompts you to implement a workflow with distance-based RDA (dbRDA). You can refer to chapter <a href="20_beta_diversity.html#sec-dbrda-workflow" class="quarto-xref"><span>Section 7.4.1</span></a> for a step-by-step walkthrough, which may be simplified in the future.</p>
 <ol type="1">
 <li>Import the mia and vegan packages, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 <li>Create dbRDA with Bray-Curtis dissimilarities on relative abundances. Use PERMANOVA. Can differences between samples be explained with variables of sample meta data?</li>
@@ -1027,7 +1035,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia and ALDEx2 packages, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ggloor/ALDEx_bioc">ALDEx2</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"peerj13075"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
@@ -1038,7 +1046,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Agglomerate the TreeSE by genus and filter by a prevalence of 10%. You can perform both operations in one go with <code>subsetByPrevalentFeatures</code> by specifying the <code>rank</code> and <code>prevalence</code> arguments.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
 <span>                                 rank <span class="op">=</span> <span class="st">"genus"</span>,</span>
 <span>                                 prevalence <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1047,14 +1055,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Model the counts assay of the TreeSE with <code>aldex.clr</code> and store it into the variable <code>x</code>. As a second argument, provide the grouping variable <code>Diet</code>, which is contained in a column of the colData.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ALDEx2/man/aldex.clr.function.html">aldex.clr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span>, <span class="va">tse</span><span class="op">$</span><span class="va">Gender</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ALDEx2/man/aldex.clr.function.html">aldex.clr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span>, <span class="va">tse</span><span class="op">$</span><span class="va">Gender</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="4" type="1">
 <li>Feed <code>x</code> to the functions <code>aldex.ttest</code> to perform t-test and to <code>aldex.effect</code> to estimate effect sizes. Store the output into <code>x_tt</code> and <code>x_effect</code>, respectively.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x_tt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ALDEx2/man/aldex.ttest.html">aldex.ttest</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">x_tt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ALDEx2/man/aldex.ttest.html">aldex.ttest</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
 <span><span class="va">x_effect</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/ALDEx2/man/aldex.effect.html">aldex.effect</a></span><span class="op">(</span><span class="va">x</span>, CI <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -1062,7 +1070,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Create a data.frame named <code>aldex_out</code> which includes both <code>x_tt</code> and <code>x_effect</code> and filter for the features with <code>wi.eBH &lt; 0.05</code>. Are there any significantly differential abundance taxa?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">aldex_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">x_tt</span>, <span class="va">x_effect</span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">aldex_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">x_tt</span>, <span class="va">x_effect</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">aldex_out</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">rownames_to_column</span><span class="op">(</span>var <span class="op">=</span> <span class="st">"Genus"</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
@@ -1079,7 +1087,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia and MicrobiomeStat packages, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">MicrobiomeStat</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"peerj13075"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
@@ -1090,7 +1098,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Agglomerate the TreeSE by genus and filter by a prevalence of 10%. You can perform both operations in one go with <code>subsetByPrevalentFeatures</code> by specifying the <code>rank</code> and <code>prevalence</code> arguments.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
 <span>                                 rank <span class="op">=</span> <span class="st">"genus"</span>,</span>
 <span>                                 prevalence <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1099,7 +1107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Model the counts assay of the TreeSE with <code>linda</code> and store the output into a variable named <code>linda_out</code>. Provide the colData converted into a data.frame (with <code>as.data.frame</code>) as the second argument, and a <code>formula</code> with the Age, Gender and Diet as variables. For example, <code>formula = "~ A + B"</code> represents a formula with variables A and B.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MicrobiomeStat/man/linda.html">linda</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">)</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/MicrobiomeStat/man/linda.html">linda</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>                   <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>                   formula <span class="op">=</span> <span class="st">"~ Diet + Gender + Age"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1108,14 +1116,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Extract the <code>output$AgeElderly</code> object from <code>linda_out</code> with <code>$</code> and store it into a variable named <code>linda_res</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_res</span> <span class="op">&lt;-</span> <span class="va">linda_out</span><span class="op">$</span><span class="va">output</span><span class="op">$</span><span class="va">AgeElderly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_res</span> <span class="op">&lt;-</span> <span class="va">linda_out</span><span class="op">$</span><span class="va">output</span><span class="op">$</span><span class="va">AgeElderly</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <ol start="5" type="1">
 <li>Filter <code>linda_res</code> for features with <code>reject == TRUE</code>. How many differentially abundant taxa were found? What are their names and how significant are they in terms of log-fold change and adjusted p-value?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_res</span> <span class="op">%&gt;%</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">linda_res</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/stats/filter.html">filter</a></span><span class="op">(</span><span class="va">reject</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">log2FoldChange</span>, <span class="va">stat</span>, <span class="va">padj</span><span class="op">)</span> <span class="op">%&gt;%</span></span>
 <span>  <span class="fu">rownames_to_column</span><span class="op">(</span>var <span class="op">=</span> <span class="st">"feature"</span><span class="op">)</span></span>
@@ -1130,7 +1138,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Import the mia and GUniFrac packages, load any of the example data sets mentioned in Chapter 3.3 with <code>data</code> and store it into a variable named <code>tse</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/mia">mia</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">GUniFrac</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"peerj13075"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
@@ -1141,7 +1149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Agglomerate the TreeSE by genus and filter by a prevalence of 10%. You can perform both operations in one go with <code>subsetByPrevalentFeatures</code> by specifying the <code>rank</code> and <code>prevalence</code> arguments.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getPrevalence.html">subsetByPrevalentFeatures</a></span><span class="op">(</span><span class="va">tse</span>,</span>
 <span>                                 rank <span class="op">=</span> <span class="st">"genus"</span>,</span>
 <span>                                 prevalence <span class="op">=</span> <span class="fl">0.1</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -1150,7 +1158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Model the counts assay of the TreeSE with <code>ZicoSeq</code> as the <code>feature.dat</code> argument and store the output into a variable named <code>zicoseq_out</code>. Provide also the colData converted to a data.frame (with <code>as.data.frame</code>) as <code>meta.dat</code>. In addition, set <code>grp.name</code> to <code>"Age"</code>, <code>adj.name</code> to <code>c("Diet", "Gender")</code>, <code>feature.dat.type</code> to <code>"count"</code>, <code>return.feature.dat</code> to <code>TRUE</code> and <code>perm.no</code> to <code>999</code>.</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zicoseq_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/GUniFrac/man/ZicoSeq.html">ZicoSeq</a></span><span class="op">(</span>feature.dat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zicoseq_out</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/GUniFrac/man/ZicoSeq.html">ZicoSeq</a></span><span class="op">(</span>feature.dat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>                       meta.dat <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/as.data.frame.html">as.data.frame</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span>,</span>
 <span>                       grp.name <span class="op">=</span> <span class="st">"Age"</span>,</span>
 <span>                       adj.name <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Diet"</span>, <span class="st">"Gender"</span><span class="op">)</span>, </span>
@@ -1163,7 +1171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>View the top six differentially abundant taxa and their adjusted p-values with <code>head(sort(zicoseq_out$p.adj.fdr))</code>. Is there any significant taxon according to ZicoSeq? Compared to the output of linda, do we see the same taxa at the top in terms of significance? Overall, to what extent do the two methods agree with one another?</li>
 </ol>
 <div class="cell" data-layout-align="center">
-<details><summary>Show solution</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zicoseq_res</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span><span class="op">(</span>p.raw <span class="op">=</span> <span class="va">zicoseq_out</span><span class="op">$</span><span class="va">p.raw</span>,</span>
+<details class="code-fold"><summary>Show solution</summary><div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">zicoseq_res</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind.data.frame</a></span><span class="op">(</span>p.raw <span class="op">=</span> <span class="va">zicoseq_out</span><span class="op">$</span><span class="va">p.raw</span>,</span>
 <span>                                p.adj.fdr <span class="op">=</span> <span class="va">zicoseq_out</span><span class="op">$</span><span class="va">p.adj.fdr</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">zicoseq_res</span> <span class="op">%&gt;%</span></span>
@@ -1285,7 +1293,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Analyze correlations between the microbiota and the biomarkers experiments with <code>getExperimentCrossAssociation</code>. Don’t forget to specify the experiments you want to compare with the arguments <code>experiment1</code> and <code>experiment2</code>, and which of their assays with <code>assay.type1</code> and <code>assay.type2</code>.</li>
 <li>What does the output look like? By default, correlation is measured in terms of Kendall tau coefficients. Repeat point 2, but this time change <code>method</code> to Spearman coefficients.</li>
 <li>Are you able to infer significance from the output? In order to also obtain p-values from the cross-correlation analysis, repeat point 2 with the additional argument <code>test_significance = TRUE</code>.</li>
-<li>Visualize results with a heatmap similarly to the example in section <a href="23_multi-assay_analyses.html#sec-cross-correlation"><span>Section&nbsp;12.1</span></a>. Do you see any significant correlations? Interpret your results.</li>
+<li>Visualize results with a heatmap similarly to the example in section <a href="23_multi-assay_analyses.html#sec-cross-correlation" class="quarto-xref"><span>Section 12.1</span></a>. Do you see any significant correlations? Interpret your results.</li>
 <li>
 <strong>Extra</strong>: Perform cross-correlation analysis between the remaining experiments (microbiota vs metabolites and metabolites vs biomarkers) and visualize results with heatmaps.</li>
 </ol>
@@ -1371,10 +1379,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1384,8 +1409,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1397,7 +1431,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1441,6 +1598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1466,6 +1624,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1525,23 +1709,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../pages/95_resources.html" class="pagination-link">
+      <a href="../pages/95_resources.html" class="pagination-link" aria-label="Resources">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Resources</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/97_extra_materials.html" class="pagination-link">
+      <a href="../pages/97_extra_materials.html" class="pagination-link" aria-label="Extra material">
         <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Extra material</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left"><a href="./">Orchestrating Microbiome Analysis with Bioconductor</a></div>   
+    <div class="nav-footer-left">
+<p><a href="./">Orchestrating Microbiome Analysis with Bioconductor</a></p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
-    <div class="nav-footer-right">This book was built with <a href="https://github.com/js2264/BiocBook/">BiocBook</a> with <span class="emoji" data-emoji="heart">❤️</span></div>
+    <div class="nav-footer-right">
+<p>This book was built with <a href="https://github.com/js2264/BiocBook/">BiocBook</a> with <span class="emoji" data-emoji="heart">❤️</span></p>
+</div>
   </div>
 </footer>
 
