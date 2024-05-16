@@ -752,7 +752,7 @@ document.addEventListener("click", function (event) {
 </tr>
 </tbody>
 </table>
-<p>In summary, the dbRDA is the more general method that allows a wider variety dissimilarity, or beta diversity, indices. This method is available via <code><a href="https://rdrr.io/pkg/mia/man/runCCA.html">mia::runRDA</a></code>, which calls <code><a href="https://rdrr.io/pkg/vegan/man/capscale.html">vegan::dbrda</a></code>. By default, this uses Euclidean distances, which is equivalent to the ordinary RDA. However, the dbRDA method (<code><a href="https://rdrr.io/pkg/mia/man/runCCA.html">mia::runRDA</a></code>) allows the use of other dissimilarity indices as well.</p>
+<p>In summary, the dbRDA is the more general method that allows a wider variety dissimilarity, or beta diversity, indices. This method is available via <code><a href="https://rdrr.io/pkg/mia/man/runCCA.html">mia::runRDA</a></code>, which calls <code><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">vegan::dbrda</a></code>. By default, this uses Euclidean distances, which is equivalent to the ordinary RDA. However, the dbRDA method (<code><a href="https://rdrr.io/pkg/mia/man/runCCA.html">mia::runRDA</a></code>) allows the use of other dissimilarity indices as well.</p>
 <p>Let us next demonstrate dbRDA with the enterotype dataset. Here samples correspond to patients. The <code>colData</code> lists the clinical status of each patient and a few covariates such as gender and age.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load data</span></span>
@@ -805,7 +805,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">1.1157</td>
 <td style="text-align: right;">1.940</td>
-<td style="text-align: right;">0.035</td>
+<td style="text-align: right;">0.027</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.2795</td>
 </tr>
@@ -814,7 +814,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">0.5837</td>
 <td style="text-align: right;">1.522</td>
-<td style="text-align: right;">0.142</td>
+<td style="text-align: right;">0.132</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.1463</td>
 </tr>
@@ -823,7 +823,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.1679</td>
 <td style="text-align: right;">1.751</td>
-<td style="text-align: right;">0.103</td>
+<td style="text-align: right;">0.106</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.0421</td>
 </tr>
@@ -832,7 +832,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.5245</td>
 <td style="text-align: right;">5.471</td>
-<td style="text-align: right;">0.001</td>
+<td style="text-align: right;">0.002</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.1314</td>
 </tr>
@@ -896,7 +896,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0103</td>
 <td style="text-align: right;">0.4158</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.531</td>
+<td style="text-align: right;">0.557</td>
 <td style="text-align: right;">0.9283</td>
 <td style="text-align: right;">0.0111</td>
 </tr>
@@ -907,7 +907,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0113</td>
 <td style="text-align: right;">17.0255</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.434</td>
+<td style="text-align: right;">0.429</td>
 <td style="text-align: right;">0.3319</td>
 <td style="text-align: right;">0.9860</td>
 </tr>
@@ -1076,7 +1076,7 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 <span><span class="co"># Set seed for reproducibility</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">1576</span><span class="op">)</span></span>
 <span><span class="co"># Perform dbRDA</span></span>
-<span><span class="va">dbrda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/vegan/man/capscale.html">dbrda</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>,<span class="st">"relabundance"</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">Group</span>, </span>
+<span><span class="va">dbrda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">dbrda</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>,<span class="st">"relabundance"</span><span class="op">)</span><span class="op">)</span> <span class="op">~</span> <span class="va">Group</span>, </span>
 <span>               data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co"># Perform permutational analysis</span></span>
 <span><span class="va">permanova2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/vegan/man/anova.cca.html">anova.cca</a></span><span class="op">(</span><span class="va">dbrda</span>,</span>
@@ -1125,7 +1125,7 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 <p>In the example above, the largest differences between the two groups can be attributed to <em>Genus:Bacteroides</em> (elevated in the first group) and <em>Family:Ruminococcaceae</em> (elevated in the second group), and many other co-varying species.</p>
 </section><section id="retrieving-feature-loadings" class="level3" data-number="7.4.2"><h3 data-number="7.4.2" class="anchored" data-anchor-id="retrieving-feature-loadings">
 <span class="header-section-number">7.4.2</span> Retrieving feature loadings</h3>
-<p>The functions <code><a href="https://rdrr.io/pkg/vegan/man/capscale.html">vegan::dbrda</a></code> and <code><a href="https://rdrr.io/pkg/vegan/man/capscale.html">vegan::capscale</a></code> are exchangeable with <code><a href="https://rdrr.io/pkg/vegan/man/adonis.html">vegan::adonis2</a></code> with certain settings, and can be used to retrieve feature loadings.</p>
+<p>The functions <code><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">vegan::dbrda</a></code> and <code><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">vegan::capscale</a></code> are exchangeable with <code><a href="https://rdrr.io/pkg/vegan/man/adonis.html">vegan::adonis2</a></code> with certain settings, and can be used to retrieve feature loadings.</p>
 </section><section id="checking-the-homogeneity-condition" class="level3 page-columns page-full" data-number="7.4.3"><h3 data-number="7.4.3" class="anchored" data-anchor-id="checking-the-homogeneity-condition">
 <span class="header-section-number">7.4.3</span> Checking the homogeneity condition</h3>
 <p>It is important to note that the application of PERMANOVA assumes homogeneous group dispersions (variances). This can be tested with the PERMDISP2 method <span class="citation" data-cites="Anderson2006">(<a href="#ref-Anderson2006" role="doc-biblioref">Anderson 2006</a>)</span> by using the same assay and distance method than in PERMANOVA.</p>
