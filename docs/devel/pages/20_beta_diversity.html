@@ -88,10 +88,12 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -103,7 +105,6 @@ div.csl-indent {
     "/",
     "s"
   ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -119,10 +120,55 @@ div.csl-indent {
   }
 }</script>
 </head>
-<body class="nav-sidebar docked slimcontent">
+<body class="nav-sidebar docked nav-fixed slimcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../docs/pages/images/mia_logo.png" alt="" class="navbar-logo"></a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Orchestrating Microbiome Analysis</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+<li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">TEST</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bi-github">
+<li>
+    <a class="dropdown-item" href="https://github.com/microbiome/OMA/">
+ <span class="dropdown-text">Source Code</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://microbiome.github.io/OMA/docs/devel/">
+ <span class="dropdown-text">Browse version <code>devel</code></span></a>
+  </li>  
+    </ul>
+</li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+</div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -133,31 +179,9 @@ div.csl-indent {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="../">Orchestrating Microbiome Analysis</a> 
-        <div class="sidebar-tools-main">
-    <div class="dropdown">
-      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label=""><i class="bi bi-git"></i></a>
-      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-<li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://github.com/microbiome/OMA/">
-            Source Code
-            </a>
-          </li>
-          <li>
-            <a class="dropdown-item sidebar-tools-main-item" href="https://microbiome.github.io/OMA/docs/devel/">
-            Browse version `devel`
-            </a>
-          </li>
-      </ul>
-</div>
-</div>
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
@@ -167,7 +191,7 @@ div.csl-indent {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Welcome</span></a>
+ <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -178,13 +202,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
  <span class="menu-text">OMA ecosystem</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/06_packages.html" class="sidebar-item-text sidebar-link">
@@ -272,13 +296,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
  <span class="menu-text">Advanced topics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/60_network_learning.html" class="sidebar-item-text sidebar-link">
@@ -319,13 +343,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">Training</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/80_training.html" class="sidebar-item-text sidebar-link">
@@ -348,13 +372,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Appendices</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/97_extra_materials.html" class="sidebar-item-text sidebar-link">
@@ -454,7 +478,14 @@ document.addEventListener("click", function (event) {
 }
 </style>
 </div>
-<p>Beta diversity quantifies the dissimilarity between communities (multiple samples), as opposed to alpha diversity which focuses on variation within a community (one sample). In microbiome research, commonly used metrics of beta diversity include the Bray-Curtis index (for compositional data), Jaccard index (for presence/absence data, ignoring abundance information), Aitchison distance (Euclidean distance for clr transformed abundances, aiming to avoid the compositionality bias), and the Unifrac distance (that takes into account the phylogenetic tree information). Notably, only some of these measures are actual <em>distances</em>, as this is a mathematical concept whose definition is not satisfied by certain ecological measure, such as the Bray-Curtis index. Therefore, the terms dissimilarity and beta diversity are preferred.</p>
+<p>Beta diversity quantifies the dissimilarity between communities (multiple samples), as opposed to alpha diversity which focuses on variation within a community (one sample). In microbiome research, commonly used metrics of beta diversity include:</p>
+<ul>
+<li>Bray-Curtis index (for compositional data)</li>
+<li>Jaccard index (for presence/absence data, ignoring abundance information)</li>
+<li>Aitchison distance (Euclidean distance for clr transformed abundances, aiming to avoid the compositionality bias)</li>
+<li>Unifrac distance (takes into account the phylogenetic tree information).</li>
+</ul>
+<p>Notably, only some of these measures are actual <em>distances</em>, as this is a mathematical concept whose definition is not satisfied by certain ecological measure, such as the Bray-Curtis index. Therefore, the terms dissimilarity and beta diversity are preferred.</p>
 <table class="table">
 <colgroup>
 <col style="width: 39%">
@@ -509,8 +540,13 @@ document.addEventListener("click", function (event) {
 </tr>
 </tbody>
 </table>
-<p>In practice, beta diversity is usually represented as a <code>dist</code> object, a triangular matrix where the distance between each pair of samples is encoded by a specific cell. This distance matrix can then undergo ordination, which is an important ecological tool to reduce the dimensionality of data for a more efficient analysis and visualization. Ordination techniques aim to capture as much essential information from the data as possible and turn it into a lower dimensional representation. Dimension reduction is bound to lose information but commonly used ordination techniques can preserve relevant information of sample similarities in an optimal way, which is defined in different ways by different methods.</p>
-<p>Based on the type of algorithm, ordination methods in microbiome research can be generally divided in two categories: unsupervised and supervised ordination. The former includes Principal Coordinate Analysis (PCoA), Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP), whereas the latter is mainly represented by distance-based Redundancy Analysis (dbRDA). We will first discuss unsupervised ordination methods and then proceed to supervised ones.</p>
+<p>In practice, beta diversity is usually represented as a <code>dist</code> object. Such an object is a triangular matrix where the distance between each pair of samples is encoded by a specific cell. This distance matrix can then undergo ordination, which is an important ecological tool to reduce the dimensionality of data for a more efficient analysis and visualization. Ordination techniques aim to capture as much essential information from the data as possible and turn it into a lower dimensional representation. Dimension reduction is bound to lose information but commonly used ordination techniques can preserve relevant information of sample similarities in an optimal way, which is defined in different ways by different methods.</p>
+<p>Based on the type of algorithm, ordination methods in microbiome research can be generally divided in two categories:</p>
+<ul>
+<li>unsupervised ordination</li>
+<li>supervised ordination</li>
+</ul>
+<p>The former includes Principal Coordinate Analysis (PCoA), Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP), whereas the latter is mainly represented by distance-based Redundancy Analysis (dbRDA). We will first discuss unsupervised ordination methods and then proceed to supervised ones.</p>
 <p>Let us now prepare some demonstration data for the practical examples.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load mia and import sample dataset</span></span>
@@ -518,7 +554,8 @@ document.addEventListener("click", function (event) {
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="st">"GlobalPatterns"</span>, package <span class="op">=</span> <span class="st">"mia"</span><span class="op">)</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="va">GlobalPatterns</span></span>
 <span></span>
-<span><span class="co"># Beta diversity metrics like Bray-Curtis are often applied to relabundances</span></span>
+<span><span class="co"># Beta diversity metrics like Bray-Curtis are often </span></span>
+<span><span class="co"># applied to relabundances</span></span>
 <span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/transformAssay.html">transformAssay</a></span><span class="op">(</span><span class="va">tse</span>,</span>
 <span>                      assay.type <span class="op">=</span> <span class="st">"counts"</span>,</span>
 <span>                      method <span class="op">=</span> <span class="st">"relabundance"</span><span class="op">)</span></span>
@@ -570,8 +607,10 @@ document.addEventListener("click", function (event) {
 <span><span class="va">rel_eig</span> <span class="op">&lt;-</span> <span class="va">e</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">e</span><span class="op">[</span><span class="va">e</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Add explained variance for each axis</span></span>
-<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"PCoA 1 ("</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">rel_eig</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>, <span class="fl">1</span><span class="op">)</span>, <span class="st">"%"</span>, <span class="st">")"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span>,</span>
-<span>              y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"PCoA 2 ("</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">rel_eig</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>, <span class="fl">1</span><span class="op">)</span>, <span class="st">"%"</span>, <span class="st">")"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">p</span> <span class="op">&lt;-</span> <span class="va">p</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"PCoA 1 ("</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">rel_eig</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>, <span class="fl">1</span><span class="op">)</span>,</span>
+<span>                        <span class="st">"%"</span>, <span class="st">")"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span>,</span>
+<span>              y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"PCoA 2 ("</span>, <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">100</span> <span class="op">*</span> <span class="va">rel_eig</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>, <span class="fl">1</span><span class="op">)</span>, </span>
+<span>                        <span class="st">"%"</span>, <span class="st">")"</span>, sep <span class="op">=</span> <span class="st">""</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">p</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -690,7 +729,8 @@ document.addEventListener("click", function (event) {
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vegandevs/vegan">vegan</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Quantify dissimilarities in the original feature space</span></span>
-<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"relabundance"</span><span class="op">)</span> <span class="co"># Pick relabunance assay separately</span></span>
+<span><span class="co"># Pick relabunance assay separately</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse</span>, <span class="st">"relabundance"</span><span class="op">)</span> </span>
 <span><span class="va">d0</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/vegan/man/vegdist.html">vegdist</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/t.html">t</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="st">"bray"</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># PCoA Ordination</span></span>
@@ -700,8 +740,8 @@ document.addEventListener("click", function (event) {
 <span><span class="co"># Quantify dissimilarities in the ordination space</span></span>
 <span><span class="va">dp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">as.matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/dist.html">dist</a></span><span class="op">(</span><span class="va">pcoa</span><span class="op">)</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># Calculate stress i.e. relative difference in the original and</span></span>
-<span><span class="co"># projected dissimilarities</span></span>
+<span><span class="co"># Calculate stress i.e. relative difference </span></span>
+<span><span class="co"># in the original and projected dissimilarities</span></span>
 <span><span class="va">stress</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="op">(</span><span class="va">dp</span> <span class="op">-</span> <span class="va">d0</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">d0</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>A Shepard plot visualizes the original versus the ordinated dissimilarity between the observations.</p>
@@ -805,7 +845,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">1.1157</td>
 <td style="text-align: right;">1.940</td>
-<td style="text-align: right;">0.027</td>
+<td style="text-align: right;">0.041</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.2795</td>
 </tr>
@@ -814,7 +854,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">0.5837</td>
 <td style="text-align: right;">1.522</td>
-<td style="text-align: right;">0.132</td>
+<td style="text-align: right;">0.126</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.1463</td>
 </tr>
@@ -823,7 +863,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.1679</td>
 <td style="text-align: right;">1.751</td>
-<td style="text-align: right;">0.106</td>
+<td style="text-align: right;">0.114</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.0421</td>
 </tr>
@@ -832,7 +872,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.5245</td>
 <td style="text-align: right;">5.471</td>
-<td style="text-align: right;">0.002</td>
+<td style="text-align: right;">0.001</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.1314</td>
 </tr>
@@ -885,7 +925,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0628</td>
 <td style="text-align: right;">2.7440</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.114</td>
+<td style="text-align: right;">0.112</td>
 <td style="text-align: right;">1.0288</td>
 <td style="text-align: right;">0.2440</td>
 </tr>
@@ -896,7 +936,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0103</td>
 <td style="text-align: right;">0.4158</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.557</td>
+<td style="text-align: right;">0.537</td>
 <td style="text-align: right;">0.9283</td>
 <td style="text-align: right;">0.0111</td>
 </tr>
@@ -907,7 +947,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0113</td>
 <td style="text-align: right;">17.0255</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.429</td>
+<td style="text-align: right;">0.428</td>
 <td style="text-align: right;">0.3319</td>
 <td style="text-align: right;">0.9860</td>
 </tr>
@@ -948,21 +988,20 @@ Salosensaari, Aaro, Ville Laitinen, Aki Havulinna, Guillaume Méric, Susan Cheng
 <span>                            assay.type <span class="op">=</span> <span class="st">"counts"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Add info on dominant genus per sample</span></span>
-<span><span class="va">tse_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/perSampleDominantTaxa.html">addPerSampleDominantFeatures</a></span><span class="op">(</span><span class="va">tse_genus</span>,</span>
-<span>                                          assay.type <span class="op">=</span> <span class="st">"relabundance"</span>,</span>
-<span>                                          name <span class="op">=</span> <span class="st">"dominant_taxa"</span><span class="op">)</span></span>
+<span><span class="va">tse_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/getDominant.html">addDominant</a></span><span class="op">(</span><span class="va">tse_genus</span>,</span>
+<span>                         assay.type <span class="op">=</span> <span class="st">"relabundance"</span>,</span>
+<span>                         name <span class="op">=</span> <span class="st">"dominant_taxa"</span><span class="op">)</span></span>
 <span><span class="co"># Overview</span></span>
-<span><span class="fu"><a href="https://rdrr.io/pkg/mia/man/summaries.html">countDominantFeatures</a></span><span class="op">(</span><span class="va">tse_genus</span>, rank <span class="op">=</span> <span class="st">"Genus"</span>, digits <span class="op">=</span> <span class="fl">3</span>, name <span class="op">=</span> <span class="st">"dominant_taxa"</span><span class="op">)</span></span>
-<span><span class="co">##  # A tibble: 17 × 3</span></span>
-<span><span class="co">##    dominant_taxa                n rel_freq</span></span>
-<span><span class="co">##    &lt;chr&gt;                    &lt;int&gt;    &lt;dbl&gt;</span></span>
-<span><span class="co">##  1 Genus:Bacteroides            5    0.192</span></span>
-<span><span class="co">##  2 Order:Stramenopiles          4    0.154</span></span>
-<span><span class="co">##  3 Family:Desulfobulbaceae      2    0.077</span></span>
-<span><span class="co">##  4 Genus:Streptococcus          2    0.077</span></span>
-<span><span class="co">##  5 Class:Chloracidobacteria     1    0.038</span></span>
-<span><span class="co">##  6 Family:ACK-M1                1    0.038</span></span>
-<span><span class="co">##  # ℹ 11 more rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/pkg/mia/man/summaries.html">summarizeDominance</a></span><span class="op">(</span><span class="va">tse_genus</span>, rank <span class="op">=</span> <span class="st">"Genus"</span>, digits <span class="op">=</span> <span class="fl">3</span>, name <span class="op">=</span> <span class="st">"dominant_taxa"</span><span class="op">)</span></span>
+<span><span class="co">##  # A tibble: 6 × 3</span></span>
+<span><span class="co">##    dominant_taxa            n rel_freq</span></span>
+<span><span class="co">##    &lt;chr&gt;                &lt;int&gt;    &lt;dbl&gt;</span></span>
+<span><span class="co">##  1 Class:Thermoprotei      16    0.615</span></span>
+<span><span class="co">##  2 Genus:Bacteroides        5    0.192</span></span>
+<span><span class="co">##  3 Genus:Streptococcus      2    0.077</span></span>
+<span><span class="co">##  4 Genus:Dolichospermum     1    0.038</span></span>
+<span><span class="co">##  5 Genus:Neisseria          1    0.038</span></span>
+<span><span class="co">##  6 Genus:Veillonella        1    0.038</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Next, we perform PCoA with Bray-Curtis dissimilarity.</p>
 <div class="cell" data-layout-align="center">
@@ -974,27 +1013,30 @@ Salosensaari, Aaro, Ville Laitinen, Aki Havulinna, Guillaume Méric, Susan Cheng
 <p>Finally, we get the top taxa and and visualize their abundances on PCoA. Note that A 3D interactive version of the plot below can be found in <a href="97_extra_materials.html" class="quarto-xref"><span>Appendix A</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Getting the top taxa</span></span>
-<span><span class="va">top_taxa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/summaries.html">getTopFeatures</a></span><span class="op">(</span><span class="va">tse_genus</span>,</span>
+<span><span class="va">top_taxa</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/summaries.html">getTop</a></span><span class="op">(</span><span class="va">tse_genus</span>,</span>
 <span>                           top <span class="op">=</span> <span class="fl">6</span>,</span>
 <span>                           assay.type <span class="op">=</span> <span class="st">"relabundance"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Naming all the rest of non top-taxa as "Other"</span></span>
 <span><span class="va">most_abundant</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse_genus</span><span class="op">)</span><span class="op">$</span><span class="va">dominant_taxa</span>,</span>
-<span>                        <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span><span class="kw">if</span> <span class="op">(</span><span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">top_taxa</span><span class="op">)</span> <span class="op">{</span><span class="va">x</span><span class="op">}</span> <span class="kw">else</span> <span class="op">{</span><span class="st">"Other"</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
+<span>                        <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span><span class="kw">if</span> <span class="op">(</span><span class="va">x</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">top_taxa</span><span class="op">)</span> <span class="op">{</span><span class="va">x</span><span class="op">}</span> </span>
+<span>                          <span class="kw">else</span> <span class="op">{</span><span class="st">"Other"</span><span class="op">}</span><span class="op">}</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Storing the previous results as a new column within colData</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">colData</a></span><span class="op">(</span><span class="va">tse_genus</span><span class="op">)</span><span class="op">$</span><span class="va">most_abundant</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">most_abundant</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Calculating percentage of the most abundant</span></span>
 <span><span class="va">most_abundant_freq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html">table</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">most_abundant</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">most_abundant_percent</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">most_abundant_freq</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">most_abundant_freq</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span>, <span class="fl">1</span><span class="op">)</span></span>
+<span><span class="va">most_abundant_percent</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">most_abundant_freq</span> <span class="op">/</span> </span>
+<span>                                 <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">most_abundant_freq</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Retrieving the explained variance</span></span>
 <span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/attr.html">attr</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SingleCellExperiment/man/reducedDims.html">reducedDim</a></span><span class="op">(</span><span class="va">tse_genus</span>, <span class="st">"PCoA_BC"</span><span class="op">)</span>, <span class="st">"eig"</span><span class="op">)</span></span>
 <span><span class="va">var_explained</span> <span class="op">&lt;-</span> <span class="va">e</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">e</span><span class="op">[</span><span class="va">e</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">]</span><span class="op">)</span> <span class="op">*</span> <span class="fl">100</span></span>
 <span></span>
 <span><span class="co"># Define colors for visualization</span></span>
-<span><span class="va">my_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"black"</span>, <span class="st">"blue"</span>, <span class="st">"lightblue"</span>, <span class="st">"darkgray"</span>, <span class="st">"magenta"</span>, <span class="st">"darkgreen"</span>, <span class="st">"red"</span><span class="op">)</span></span>
+<span><span class="va">my_colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"black"</span>, <span class="st">"blue"</span>, <span class="st">"lightblue"</span>, <span class="st">"darkgray"</span>,</span>
+<span>               <span class="st">"magenta"</span>, <span class="st">"darkgreen"</span>, <span class="st">"red"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Visualization</span></span>
 <span><span class="va">plot</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/pkg/scater/man/plotReducedDim.html">plotReducedDim</a></span><span class="op">(</span><span class="va">tse_genus</span>, <span class="st">"PCoA_BC"</span>,</span>
@@ -1056,7 +1098,7 @@ Salosensaari, Aaro, Ville Laitinen, Aki Havulinna, Guillaume Méric, Susan Cheng
 <div class="no-row-height column-margin column-container"><div id="ref-Anderson2001" class="csl-entry" role="listitem">
 Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate Analysis of Variance.”</span> <em>Austral Ecology</em> 26 (1): 32–46. <a href="https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x">https://doi.org/10.1111/j.1442-9993.2001.01070.pp.x</a>.
 </div></div><p>PERMANOVA tests the hypothesis that the centroids and dispersion of the community are equivalent between the compared groups. A p-value smaller than the significance threshold indicates that the groups have a different community composition. This method is implemented with the <a href="https://www.rdocumentation.org/packages/vegan/versions/2.4-2/topics/adonis"><code>adonis2</code></a> function from the vegan package.</p>
-<p>By default, the argument <code>by</code> is set to <code>"terms"</code>, in which the order of variables in the formula matters. In this case, each variable is analyzed sequentially, and the result is different when more than 1 variable is introduced and their order differs. Therefore, it is recommended to set <code>by = "margin"</code>, which specifies that the marginal effect of each variable is analyzed individually. You can view a comparison between the two designs in chapter <span class="quarto-unresolved-ref">?sec-compare-permanova</span>.</p>
+<p>By default, the argument <code>by</code> is set to <code>"terms"</code>, in which the order of variables in the formula matters. In this case, each variable is analyzed sequentially, and the result is different when more than 1 variable is introduced and their order differs. Therefore, it is recommended to set <code>by = "margin"</code>, which specifies that the marginal effect of each variable is analyzed individually. You can view a comparison between the two designs in chapter <a href="https://microbiome.github.io/OMA/docs/devel/pages/97_extra_materials.html#compare-permanova">PERMANOVA comparison</a>.</p>
 <p>We can perform PERMANOVA either with <code>adonis2</code> function or by first performing dbRDA and then applying permutational test its results. An advantage of the latter approach is that by doing so we can get coefficients: how much each taxa affects the variation between communities.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Agglomerate data to Species level</span></span>
@@ -1090,8 +1132,8 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 <span><span class="fu"><a href="https://rdrr.io/r/base/colnames.html">rownames</a></span><span class="op">(</span><span class="va">p_values</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"adonis2"</span>, <span class="st">"dbRDA+anova.cca"</span><span class="op">)</span></span>
 <span><span class="va">p_values</span></span>
 <span><span class="co">##                  p_values</span></span>
-<span><span class="co">##  adonis2             0.02</span></span>
-<span><span class="co">##  dbRDA+anova.cca     0.02</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##  adonis2             0.42</span></span>
+<span><span class="co">##  dbRDA+anova.cca     0.42</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As we can see, the community composition is significantly different between the groups (p &lt; 0.05), and these two methods give equal p-values.</p>
 <p>Let us visualize the model coefficients for species that exhibit the largest differences between the groups. This gives some insights into how the groups tend to differ from each other in terms of community composition.</p>
@@ -1122,7 +1164,7 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 </div>
 </div>
 </div>
-<p>In the example above, the largest differences between the two groups can be attributed to <em>Genus:Bacteroides</em> (elevated in the first group) and <em>Family:Ruminococcaceae</em> (elevated in the second group), and many other co-varying species.</p>
+<p>In the example above, the largest differences between the two groups can be attributed to <em>Species:Faecalibacteriumprausnitzii</em> (elevated in the first group) and <em>Class:Thermoprotei</em> (elevated in the second group), and many other co-varying species.</p>
 </section><section id="retrieving-feature-loadings" class="level3" data-number="7.4.2"><h3 data-number="7.4.2" class="anchored" data-anchor-id="retrieving-feature-loadings">
 <span class="header-section-number">7.4.2</span> Retrieving feature loadings</h3>
 <p>The functions <code><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">vegan::dbrda</a></code> and <code><a href="https://rdrr.io/pkg/vegan/man/dbrda.html">vegan::capscale</a></code> are exchangeable with <code><a href="https://rdrr.io/pkg/vegan/man/adonis.html">vegan::adonis2</a></code> with certain settings, and can be used to retrieve feature loadings.</p>
@@ -1136,11 +1178,9 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 <span><span class="co">##  Analysis of Variance Table</span></span>
 <span><span class="co">##  </span></span>
 <span><span class="co">##  Response: Distances</span></span>
-<span><span class="co">##            Df Sum Sq Mean Sq F value  Pr(&gt;F)    </span></span>
-<span><span class="co">##  Groups     1 0.2385  0.2385     103 3.6e-10 ***</span></span>
-<span><span class="co">##  Residuals 24 0.0554  0.0023                    </span></span>
-<span><span class="co">##  ---</span></span>
-<span><span class="co">##  Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##            Df Sum Sq Mean Sq F value Pr(&gt;F)</span></span>
+<span><span class="co">##  Groups     1  0.094  0.0940    2.82   0.11</span></span>
+<span><span class="co">##  Residuals 24  0.801  0.0334</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If the groups have similar dispersion, PERMANOVA can be seen as an appropriate choice for comparing community compositions.</p>
 </section></section><section id="summary" class="level2" data-number="7.5"><h2 data-number="7.5" class="anchored" data-anchor-id="summary">
@@ -1196,6 +1236,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
