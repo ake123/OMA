@@ -54,12 +54,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -131,7 +129,6 @@ div.csl-indent {
 </ul>
 </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
@@ -433,7 +430,7 @@ document.addEventListener("click", function (event) {
 <section id="core-team" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="core-team">Core team</h3>
 <p>Contributions to this Gitbook from the various developers are coordinated by:</p>
 <ul>
-<li><p><em>Leo Lahti, DSc</em>, professor in Data Science at the <a href="https://datascience.utu.fi/">Department of Computing, University of Turku, Finland</a>, with a focus on computational microbiome analysis. Lahti obtained doctoral degree (DSc) from Aalto University in Finland (2010), developing probabilistic machine learning with applications to high-throughput life science data integration. Since then he has focused on microbiome research and developed, for instance, the <em>phyloseq</em>-based <a href="https://bioconductor.org/packages/release/bioc/html/microbiome.html">microbiome R package</a> before starting to develop the <em>TreeSummarizedExperiment</em> / <em>MultiAssayExperiment</em> framework and the mia family of Bioconductor packages for microbiome data science introduced in this gitbook. Lahti led the development of <a href="https://avointiede.fi/en/policies-materials/policies-open-science-and-research-finland/policy-open-research-data-and-methods">national policy on open access to research methods in Finland</a>. He is current member in the <a href="https://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a> and runs regular training workshops in microbiome data science.</p></li>
+<li><p><em>Leo Lahti, DSc</em>, professor in Data Science in the <a href="https://datascience.utu.fi/">Department of Computing, University of Turku, Finland</a>, with a focus on computational microbiome analysis. Lahti obtained a doctoral degree (DSc) from Aalto University in Finland (2010), developing probabilistic machine learning with applications to high-throughput life science data integration. Since then he has focused on microbiome research and developed, for instance, the <em>phyloseq</em>-based <a href="https://bioconductor.org/packages/release/bioc/html/microbiome.html">microbiome R package</a> before starting to develop the <em>TreeSummarizedExperiment</em> / <em>MultiAssayExperiment</em> framework and the mia family of Bioconductor packages for microbiome data science introduced in this Gitbook. Lahti led the development of <a href="https://avointiede.fi/en/policies-materials/policies-open-science-and-research-finland/policy-open-research-data-and-methods">national policy on open access to research methods in Finland</a>. He is a current member in the <a href="https://bioconductor.org/about/community-advisory-board/">Bioconductor Community Advisory Board</a> and runs regular training workshops in microbiome data science.</p></li>
 <li><p><em>Tuomas Borman</em>, PhD researcher and the lead developer of OMA/mia at the Department of Computing, University of Turku.</p></li>
 </ul></section><section id="contributors" class="level3 unnumbered"><h3 class="unnumbered anchored" data-anchor-id="contributors">Contributors</h3>
 <p>This work is a remarkably collaborative effort. The full list of contributors is available via <a href="https://github.com/microbiome/OMA/graphs/contributors">Github</a>. Some key authors/contributors include:</p>
@@ -441,7 +438,7 @@ document.addEventListener("click", function (event) {
 <li><p><em>Felix Ernst, PhD</em>, among the first developers of R/Bioc methods for microbiome research based on the <em>SummarizedExperiment</em> class and its derivatives.</p></li>
 <li><p><em>Giulio Benedetti</em>, scientific programmer at the Department of Computing, University of Turku. His research interest is mostly related to Data Science. He has also helped to expand the SummarizedExperiment-based microbiome analysis framework to the Julia language, implementing <a href="https://github.com/JuliaTurkuDataScience/MicrobiomeAnalysis.jl">MicrobiomeAnalysis.jl</a>.</p></li>
 <li><p><em>Sudarshan Shetty, PhD</em> has supported the establishment of the framework and associated tools. He also maintains a list of <a href="https://microsud.github.io/Tools-Microbiome-Analysis/">microbiome R packages</a>.</p></li>
-<li><p><em>Henrik Eckermann</em>, in particular to the development of the differential abundance analyses</p></li>
+<li><p><em>Henrik Eckermann</em>, in particular to the development of differential abundance analyses</p></li>
 <li><p><em>Chouaib Benchraka</em> provided various contributions to the package ecosystem and the OMA book</p></li>
 <li><p><em>Yağmur Şimşek</em> converted the miaSim R package to support the Bioconductor framework</p></li>
 <li><p><em>Basil Courbayre</em> provided various contributions to the package ecosystem and the OMA book, in particular on unsupervised machine learning</p></li>
@@ -545,150 +542,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

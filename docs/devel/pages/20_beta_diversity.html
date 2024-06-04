@@ -88,12 +88,10 @@ div.csl-indent {
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -165,7 +163,6 @@ div.csl-indent {
 </ul>
 </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
@@ -478,7 +475,7 @@ document.addEventListener("click", function (event) {
 }
 </style>
 </div>
-<p>Beta diversity quantifies the dissimilarity between communities (multiple samples), as opposed to alpha diversity which focuses on variation within a community (one sample). In microbiome research, commonly used metrics of beta diversity include:</p>
+<p>Beta diversity quantifies the dissimilarity between communities (multiple samples), as opposed to alpha diversity, which focuses on variation within a community (one sample). In microbiome research, commonly used metrics of beta diversity include:</p>
 <ul>
 <li>Bray-Curtis index (for compositional data)</li>
 <li>Jaccard index (for presence/absence data, ignoring abundance information)</li>
@@ -546,7 +543,7 @@ document.addEventListener("click", function (event) {
 <li>unsupervised ordination</li>
 <li>supervised ordination</li>
 </ul>
-<p>The former includes Principal Coordinate Analysis (PCoA), Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP), whereas the latter is mainly represented by distance-based Redundancy Analysis (dbRDA). We will first discuss unsupervised ordination methods and then proceed to supervised ones.</p>
+<p>The former includes Principal Coordinate Analysis (PCoA), Principal Component Analysis (PCA) and Uniform Manifold Approximation and Projection for Dimension Reduction (UMAP), whereas the latter is mainly represented by distance-based Redundancy Analysis (dbRDA). First, we will discuss unsupervised ordination methods and then proceed to supervised ones.</p>
 <p>Let us now prepare some demonstration data for the practical examples.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load mia and import sample dataset</span></span>
@@ -580,7 +577,7 @@ document.addEventListener("click", function (event) {
 </div>
 </section><section id="sec-unsupervised-ordination" class="level2" data-number="7.2"><h2 data-number="7.2" class="anchored" data-anchor-id="sec-unsupervised-ordination">
 <span class="header-section-number">7.2</span> Unsupervised ordination</h2>
-<p>Unsupervised ordination methods variation in the data without additional information on covariates or other supervision of the model. Among the different approaches, Multi-Dimensional Scaling (MDS) and non-metric MDS (NMDS) can be regarded as the standard. They are jointly referred to as PCoA. For this demonstration we will analyse beta diversity in GlobalPatterns, and observe the variation between stool samples and those with a different origin.</p>
+<p>Unsupervised ordination methods analyze variation in the data without additional information on covariates or other supervision of the model. Among the different approaches, Multi-Dimensional Scaling (MDS) and non-metric MDS (NMDS) can be regarded as the standard. They are jointly referred to as PCoA. For this demonstration, we will analyse beta diversity in GlobalPatterns, and observe the variation between stool samples and those with a different origin.</p>
 <section id="comparing-communities-by-beta-diversity-analysis" class="level3" data-number="7.2.1"><h3 data-number="7.2.1" class="anchored" data-anchor-id="comparing-communities-by-beta-diversity-analysis">
 <span class="header-section-number">7.2.1</span> Comparing communities by beta diversity analysis</h3>
 <p>A typical comparison of community compositions starts with a visual representation of the groups by a 2D ordination. Then we estimate relative abundances and MDS ordination based on Bray-Curtis index between the groups, and visualize the results.</p>
@@ -665,7 +662,7 @@ document.addEventListener("click", function (event) {
 </div>
 </div>
 </div>
-<p>The <em>Unifrac</em> method is a special case, as it requires data on the relationship of features in form on a <code>phylo</code> tree. <code>calculateUnifrac</code> performs the calculation to return a <code>dist</code> object, which can again be used within <code>runMDS</code>.</p>
+<p>The <em>Unifrac</em> method is a special case, as it requires data on the relationship of features in the form of a <code>phylo</code> tree. <code>calculateUnifrac</code> performs the calculation to return a <code>dist</code> object, which can again be used within <code>runMDS</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tse</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/scater/man/runMDS.html">runMDS</a></span><span class="op">(</span><span class="va">tse</span>,</span>
 <span>              FUN <span class="op">=</span> <span class="fu">mia</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/mia/man/calculateUnifrac.html">calculateUnifrac</a></span>,</span>
@@ -720,10 +717,10 @@ document.addEventListener("click", function (event) {
 </div>
 </section><section id="explained-variance" class="level3" data-number="7.2.3"><h3 data-number="7.2.3" class="anchored" data-anchor-id="explained-variance">
 <span class="header-section-number">7.2.3</span> Explained variance</h3>
-<p>The percentage of explained variance is typically shown for PCA ordination plots. This quantifies the proportion of overall variance in the data that is captured by the PCA axes, or how well the ordination axes reflect the original distances.</p>
+<p>The percentage of explained variance is typically shown in PCA ordination plots. This quantifies the proportion of overall variance in the data that is captured by the PCA axes, or how well the ordination axes reflect the original distances.</p>
 <p>Sometimes a similar measure is shown for MDS/PCoA. The interpretation is generally different, however, and hence we do not recommend using it. PCA is a special case of PCoA with Euclidean distances. With non-Euclidean dissimilarities PCoA uses a trick where the pointwise dissimilarities are first cast into similarities in a Euclidean space (with some information loss i.e.&nbsp;stress) and then projected to the maximal variance axes. In this case, the maximal variance axes do not directly reflect the correspondence of the projected distances and original distances, as they do for PCA.</p>
 <p>In typical use cases, we would like to know how well the ordination reflects the original similarity structures; then the quantity of interest is the so-called “stress” function, which measures the difference in pairwise similarities between the data points in the original (high-dimensional) vs.&nbsp;projected (low-dimensional) space.</p>
-<p>Hence, we propose that for PCoA and other ordination methods, users would report relative stress, which varies in the unit interval and is better if smaller. This can be calculated as shown below.</p>
+<p>Hence, we propose that for PCoA and other ordination methods, users would report relative stress, which varies within the unit interval and is better if smaller. This can be calculated as shown below.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Load vegan package</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vegandevs/vegan">vegan</a></span><span class="op">)</span></span>
@@ -845,7 +842,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">6</td>
 <td style="text-align: right;">1.1157</td>
 <td style="text-align: right;">1.940</td>
-<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">0.048</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.2795</td>
 </tr>
@@ -854,7 +851,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">0.5837</td>
 <td style="text-align: right;">1.522</td>
-<td style="text-align: right;">0.126</td>
+<td style="text-align: right;">0.147</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.1463</td>
 </tr>
@@ -863,7 +860,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">0.1679</td>
 <td style="text-align: right;">1.751</td>
-<td style="text-align: right;">0.114</td>
+<td style="text-align: right;">0.116</td>
 <td style="text-align: right;">3.991</td>
 <td style="text-align: right;">0.0421</td>
 </tr>
@@ -925,7 +922,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0628</td>
 <td style="text-align: right;">2.7440</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.112</td>
+<td style="text-align: right;">0.125</td>
 <td style="text-align: right;">1.0288</td>
 <td style="text-align: right;">0.2440</td>
 </tr>
@@ -936,7 +933,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0103</td>
 <td style="text-align: right;">0.4158</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.537</td>
+<td style="text-align: right;">0.532</td>
 <td style="text-align: right;">0.9283</td>
 <td style="text-align: right;">0.0111</td>
 </tr>
@@ -947,7 +944,7 @@ document.addEventListener("click", function (event) {
 <td style="text-align: right;">0.0113</td>
 <td style="text-align: right;">17.0255</td>
 <td style="text-align: right;">999</td>
-<td style="text-align: right;">0.428</td>
+<td style="text-align: right;">0.410</td>
 <td style="text-align: right;">0.3319</td>
 <td style="text-align: right;">0.9860</td>
 </tr>
@@ -1187,16 +1184,16 @@ Anderson, Marti J. 2001. <span>“A New Method for Non-Parametric Multivariate A
 <span class="header-section-number">7.5</span> Summary</h2>
 <p>As a final note, we provide a comprehensive list of functions for the evaluation of dissimilarity indices available in the mia and scater packages. The <code>calculate</code> methods return a reducedDim object as an output, whereas the <code>run</code> methods store the reducedDim object into the specified TreeSE.</p>
 <ul>
-<li>Canonical Correspondence Analysis (CCA): <code>calculateCCA</code> and <code>runCCA</code>
+<li>Canonical Correspondence Analysis (CCA): <code>getCCA</code> and <code>runCCA</code>
 </li>
-<li>dbRDA: <code>calculateRDA</code> and <code>runRDA</code>; our recommended default method to assess differences in community composition (beta diversity)</li>
-<li>Double Principal Coordinate Analysis (DPCoA): <code>calculateDPCoA</code> and <code>runDPCoA</code>
+<li>dbRDA: <code>getRDA</code> and <code>runRDA</code>; our recommended default method to assess differences in community composition (beta diversity)</li>
+<li>Double Principal Coordinate Analysis (DPCoA): <code>getDPCoA</code> and <code>runDPCoA</code>
 </li>
 <li>Jensen-Shannon Divergence (JSD): <code>calculateJSD</code> and <code>runJSD</code>
 </li>
 <li>MDS: <code>calculateMDS</code> and <code>runMDS</code>
 </li>
-<li>NMDS: <code>calculateNMDS</code> and <code>runNMDS</code>
+<li>NMDS: <code>getNMDS</code> and <code>runNMDS</code>
 </li>
 <li>Overlap: <code>calculateOverlap</code> and <code>runOverlap</code>
 </li>
@@ -1236,150 +1233,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const disableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'prefetch';
-    }
-  }
-  const enableStylesheet = (stylesheets) => {
-    for (let i=0; i < stylesheets.length; i++) {
-      const stylesheet = stylesheets[i];
-      stylesheet.rel = 'stylesheet';
-    }
-  }
-  const manageTransitions = (selector, allowTransitions) => {
-    const els = window.document.querySelectorAll(selector);
-    for (let i=0; i < els.length; i++) {
-      const el = els[i];
-      if (allowTransitions) {
-        el.classList.remove('notransition');
-      } else {
-        el.classList.add('notransition');
-      }
-    }
-  }
-  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-    let newTheme = '';
-    if(darkModeDefault) {
-      newTheme = isAlternate ? baseTheme : alternateTheme;
-    } else {
-      newTheme = isAlternate ? alternateTheme : baseTheme;
-    }
-    const changeGiscusTheme = () => {
-      // From: https://github.com/giscus/giscus/issues/336
-      const sendMessage = (message) => {
-        const iframe = document.querySelector('iframe.giscus-frame');
-        if (!iframe) return;
-        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
-      sendMessage({
-        setConfig: {
-          theme: newTheme
-        }
-      });
-    }
-    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-    if (isGiscussLoaded) {
-      changeGiscusTheme();
-    }
-  }
-  const toggleColorMode = (alternate) => {
-    // Switch the stylesheets
-    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
-    manageTransitions('#quarto-margin-sidebar .nav-link', false);
-    if (alternate) {
-      enableStylesheet(alternateStylesheets);
-      for (const sheetNode of alternateStylesheets) {
-        if (sheetNode.id === "quarto-bootstrap") {
-          toggleBodyColorMode(sheetNode);
-        }
-      }
-    } else {
-      disableStylesheet(alternateStylesheets);
-      toggleBodyColorPrimary();
-    }
-    manageTransitions('#quarto-margin-sidebar .nav-link', true);
-    // Switch the toggles
-    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-    for (let i=0; i < toggles.length; i++) {
-      const toggle = toggles[i];
-      if (toggle) {
-        if (alternate) {
-          toggle.classList.add("alternate");     
-        } else {
-          toggle.classList.remove("alternate");
-        }
-      }
-    }
-    // Hack to workaround the fact that safari doesn't
-    // properly recolor the scrollbar when toggling (#1455)
-    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
-      manageTransitions("body", false);
-      window.scrollTo(0, 1);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        manageTransitions("body", true);
-      }, 40);  
-    }
-  }
-  const isFileUrl = () => { 
-    return window.location.protocol === 'file:';
-  }
-  const hasAlternateSentinel = () => {  
-    let styleSentinel = getColorSchemeSentinel();
-    if (styleSentinel !== null) {
-      return styleSentinel === "alternate";
-    } else {
-      return false;
-    }
-  }
-  const setStyleSentinel = (alternate) => {
-    const value = alternate ? "alternate" : "default";
-    if (!isFileUrl()) {
-      window.localStorage.setItem("quarto-color-scheme", value);
-    } else {
-      localAlternateSentinel = value;
-    }
-  }
-  const getColorSchemeSentinel = () => {
-    if (!isFileUrl()) {
-      const storageValue = window.localStorage.getItem("quarto-color-scheme");
-      return storageValue != null ? storageValue : localAlternateSentinel;
-    } else {
-      return localAlternateSentinel;
-    }
-  }
-  const darkModeDefault = false;
-  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
-  // Dark / light mode switch
-  window.quartoToggleColorScheme = () => {
-    // Read the current dark / light value 
-    let toAlternate = !hasAlternateSentinel();
-    toggleColorMode(toAlternate);
-    setStyleSentinel(toAlternate);
-    toggleGiscusIfUsed(toAlternate, darkModeDefault);
-  };
-  // Ensure there is a toggle, if there isn't float one in the top right
-  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
-    const a = window.document.createElement('a');
-    a.classList.add('top-right');
-    a.classList.add('quarto-color-scheme-toggle');
-    a.href = "";
-    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
-    const i = window.document.createElement("i");
-    i.classList.add('bi');
-    a.appendChild(i);
-    window.document.body.appendChild(a);
-  }
-  // Switch to dark mode if need be
-  if (hasAlternateSentinel()) {
-    toggleColorMode(true);
-  } else {
-    toggleColorMode(false);
-  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
