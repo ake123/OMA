@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Orchestrating Microbiome Analysis - 3&nbsp; Data Manipulation</title>
 <style>
@@ -68,10 +68,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -104,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../docs/pages/images/mia_logo.png" alt="" class="navbar-logo"></a>
+    <img src="../pages/images/mia_logo.png" alt="" class="navbar-logo"></a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Orchestrating Microbiome Analysis</span>
     </a>
@@ -114,11 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page"> 
-<span class="menu-text">TEST</span></a>
-  </li>  
-  <li class="nav-item dropdown ">
+<li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bi-github" role="button" data-bs-toggle="dropdown" aria-expanded="false">
       <i class="bi bi-github" role="img">
 </i> 
@@ -143,6 +141,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
@@ -516,9 +515,8 @@ document.addEventListener("click", function (event) {
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
-<table class="table table-striped table-sm small" data-quarto-postprocess="true">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
 <thead><tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">.</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Freq</th>
@@ -566,7 +564,6 @@ document.addEventListener("click", function (event) {
 
 </div>
 </div>
-</div>
 <p><strong>Note</strong>: after subsetting, expect the number of columns to equal the sum of the frequencies of the samples that you are interested in. For instance, <code>ncols = Feces + Skin + Tongue = 4 + 3 + 2 = 9</code>.</p>
 <p>Next, we <em>logical index</em> across the columns of <code>tse</code> (make sure to leave the first index empty to select all rows) and filter for the samples of human origin. For this, we use the information on the samples from the meta data <code>colData(tse)</code>.</p>
 <div class="cell" data-layout-align="center">
@@ -607,9 +604,8 @@ document.addEventListener("click", function (event) {
 <span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/kable_styling.html">kable_styling</a></span><span class="op">(</span><span class="st">"striped"</span>, latex_options<span class="op">=</span><span class="st">"scale_down"</span><span class="op">)</span> <span class="op">%&gt;%</span> </span>
 <span>  <span class="fu">kableExtra</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/kableExtra/man/scroll_box.html">scroll_box</a></span><span class="op">(</span>width <span class="op">=</span> <span class="st">"100%"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div>
 <div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:100%; ">
-<table class="table table-striped table-sm small" data-quarto-postprocess="true">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
 <thead><tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">.</th>
 <th style="text-align: right;" data-quarto-table-cell-role="th">Freq</th>
@@ -645,7 +641,6 @@ document.addEventListener("click", function (event) {
 
 </div>
 </div>
-</div>
 <p><strong>Note</strong>: after subsetting, expect the number of columns to equal the sum of the frequencies of the feature(s) that you are interested in. For instance, <code>nrows = Actinobacteria + Chlamydiae = 1631 + 21 =   1652</code>.</p>
 <p>Depending on your research question, you might or might not need to agglomerate the data in the first place: if you want to find the abundance of each and every feature that belongs to Actinobacteria and Chlamydiae, agglomeration is not needed. However, if you want to find the total abundance of all features that belong to Actinobacteria or Chlamydiae, agglomeration is recommended.</p>
 <section id="non-agglomerated-data" class="level5" data-number="3.1.2.2.1"><h5 data-number="3.1.2.2.1" class="anchored" data-anchor-id="non-agglomerated-data">
@@ -668,7 +663,7 @@ document.addEventListener("click", function (event) {
 <p>When total abundances of certain phyla are of relevance, the data is initially agglomerated by Phylum. Then, similar steps as in the case of non-agglomerated data are followed.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Agglomerate by phylum</span></span>
-<span><span class="va">tse_phylum</span> <span class="op">&lt;-</span> <span class="va">tse</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/deprecate.html">mergeFeaturesByRank</a></span><span class="op">(</span>rank <span class="op">=</span> <span class="st">"Phylum"</span><span class="op">)</span></span>
+<span><span class="va">tse_phylum</span> <span class="op">&lt;-</span> <span class="va">tse</span> <span class="op">%&gt;%</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/agglomerate-methods.html">agglomerateByRank</a></span><span class="op">(</span>rank <span class="op">=</span> <span class="st">"Phylum"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Subset by feature and remove NAs</span></span>
 <span><span class="va">tse_phylum_subset_by_feature</span> <span class="op">&lt;-</span> <span class="va">tse_phylum</span><span class="op">[</span></span>
@@ -685,7 +680,7 @@ document.addEventListener("click", function (event) {
 <p>Alternatively:</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Store features of interest into phyla</span></span>
-<span><span class="va">phyla</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Phylum:Actinobacteria"</span>, <span class="st">"Phylum:Chlamydiae"</span><span class="op">)</span></span>
+<span><span class="va">phyla</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Actinobacteria"</span>, <span class="st">"Chlamydiae"</span><span class="op">)</span></span>
 <span><span class="co"># subset by feature</span></span>
 <span><span class="va">tse_phylum_subset_by_feature</span> <span class="op">&lt;-</span> <span class="va">tse_phylum</span><span class="op">[</span><span class="va">phyla</span>, <span class="op">]</span></span>
 <span><span class="co"># Show dimensions</span></span>
@@ -720,7 +715,7 @@ document.addEventListener("click", function (event) {
 <p>Sometimes data might contain, e.g., features that are not present in any of the samples. This can occur, for example, after data subsetting. In certain analyses, we might want to remove those instances.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Agglomerate data at Genus level </span></span>
-<span><span class="va">tse_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/deprecate.html">mergeFeaturesByRank</a></span><span class="op">(</span><span class="va">tse</span>, rank <span class="op">=</span> <span class="st">"Genus"</span><span class="op">)</span></span>
+<span><span class="va">tse_genus</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mia/man/agglomerate-methods.html">agglomerateByRank</a></span><span class="op">(</span><span class="va">tse</span>, rank <span class="op">=</span> <span class="st">"Genus"</span>, na.rm <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="co"># List bacteria that we want to include</span></span>
 <span><span class="va">genera</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Class:Thermoprotei"</span>, </span>
 <span>            <span class="st">"Genus:Sulfolobus"</span>, </span>
@@ -749,7 +744,7 @@ document.addEventListener("click", function (event) {
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># List total counts of each sample</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html">colSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse_genus_sub</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span></span>
 <span><span class="co">##      CL3     CC1     SV1 M31Fcsw M11Fcsw </span></span>
-<span><span class="co">##   520089  668101  398092  261053  572032</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##        1       0       0       1       1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now we can see that certain samples do not include any bacteria. We can remove those.</p>
 <div class="cell" data-layout-align="center">
@@ -760,12 +755,12 @@ document.addEventListener("click", function (event) {
 <span>                                <span class="op">]</span></span>
 <span><span class="va">tse_genus_sub</span></span>
 <span><span class="co">##  class: TreeSummarizedExperiment </span></span>
-<span><span class="co">##  dim: 3 26 </span></span>
+<span><span class="co">##  dim: 3 18 </span></span>
 <span><span class="co">##  metadata(1): agglomerated_by_rank</span></span>
 <span><span class="co">##  assays(1): counts</span></span>
 <span><span class="co">##  rownames(3): Class:Thermoprotei Genus:Sulfolobus Genus:Sediminicola</span></span>
 <span><span class="co">##  rowData names(7): Kingdom Phylum ... Genus Species</span></span>
-<span><span class="co">##  colnames(26): CL3 CC1 ... Even2 Even3</span></span>
+<span><span class="co">##  colnames(18): CL3 M31Fcsw ... TRRsed3 Even2</span></span>
 <span><span class="co">##  colData names(7): X.SampleID Primer ... SampleType Description</span></span>
 <span><span class="co">##  reducedDimNames(0):</span></span>
 <span><span class="co">##  mainExpName: NULL</span></span>
@@ -783,18 +778,18 @@ document.addEventListener("click", function (event) {
 <span></span>
 <span><span class="va">tse_genus_sub</span></span>
 <span><span class="co">##  class: TreeSummarizedExperiment </span></span>
-<span><span class="co">##  dim: 984 9 </span></span>
+<span><span class="co">##  dim: 1516 9 </span></span>
 <span><span class="co">##  metadata(1): agglomerated_by_rank</span></span>
 <span><span class="co">##  assays(1): counts</span></span>
-<span><span class="co">##  rownames(984): Class:Thermoprotei Genus:4-29 ... Genus:p-75-a5</span></span>
-<span><span class="co">##    Genus:u114</span></span>
+<span><span class="co">##  rownames(1516): Class:0319-6G9 Class:09D2Y74 ... Phylum:ZB2</span></span>
+<span><span class="co">##    Phylum:ZB3</span></span>
 <span><span class="co">##  rowData names(7): Kingdom Phylum ... Genus Species</span></span>
 <span><span class="co">##  colnames(9): M31Fcsw M11Fcsw ... TS28 TS29</span></span>
 <span><span class="co">##  colData names(7): X.SampleID Primer ... SampleType Description</span></span>
 <span><span class="co">##  reducedDimNames(0):</span></span>
 <span><span class="co">##  mainExpName: NULL</span></span>
 <span><span class="co">##  altExpNames(0):</span></span>
-<span><span class="co">##  rowLinks: a LinkDataFrame (984 rows)</span></span>
+<span><span class="co">##  rowLinks: a LinkDataFrame (1516 rows)</span></span>
 <span><span class="co">##  rowTree: 1 phylo tree(s) (19216 leaves)</span></span>
 <span><span class="co">##  colLinks: NULL</span></span>
 <span><span class="co">##  colTree: NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -802,7 +797,7 @@ document.addEventListener("click", function (event) {
 <div class="cell" data-layout-align="center">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># What is the number of bacteria that are not present?</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/colSums.html">rowSums</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/SummarizedExperiment/man/SummarizedExperiment-class.html">assay</a></span><span class="op">(</span><span class="va">tse_genus_sub</span>, <span class="st">"counts"</span><span class="op">)</span><span class="op">)</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span></span>
-<span><span class="co">##  [1] 265</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##  [1] 435</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We can see that there are bacteria that are not present in the samples we chose. We can remove those bacteria from the data.</p>
 <div class="cell" data-layout-align="center">
@@ -813,18 +808,18 @@ document.addEventListener("click", function (event) {
 <span></span>
 <span><span class="va">tse_genus_sub</span></span>
 <span><span class="co">##  class: TreeSummarizedExperiment </span></span>
-<span><span class="co">##  dim: 719 9 </span></span>
+<span><span class="co">##  dim: 1081 9 </span></span>
 <span><span class="co">##  metadata(1): agglomerated_by_rank</span></span>
 <span><span class="co">##  assays(1): counts</span></span>
-<span><span class="co">##  rownames(719): Class:Thermoprotei Genus:4-29 ... Genus:Zymomonas</span></span>
-<span><span class="co">##    Genus:u114</span></span>
+<span><span class="co">##  rownames(1081): Class:0319-6G9 Class:5B-18 ... Phylum:SR1</span></span>
+<span><span class="co">##    Phylum:WPS-2</span></span>
 <span><span class="co">##  rowData names(7): Kingdom Phylum ... Genus Species</span></span>
 <span><span class="co">##  colnames(9): M31Fcsw M11Fcsw ... TS28 TS29</span></span>
 <span><span class="co">##  colData names(7): X.SampleID Primer ... SampleType Description</span></span>
 <span><span class="co">##  reducedDimNames(0):</span></span>
 <span><span class="co">##  mainExpName: NULL</span></span>
 <span><span class="co">##  altExpNames(0):</span></span>
-<span><span class="co">##  rowLinks: a LinkDataFrame (719 rows)</span></span>
+<span><span class="co">##  rowLinks: a LinkDataFrame (1081 rows)</span></span>
 <span><span class="co">##  rowTree: 1 phylo tree(s) (19216 leaves)</span></span>
 <span><span class="co">##  colLinks: NULL</span></span>
 <span><span class="co">##  colTree: NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -873,7 +868,7 @@ document.addEventListener("click", function (event) {
 <span></span>
 <span><span class="co"># view new variable</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">tse</span><span class="op">$</span><span class="va">NewVariable</span><span class="op">)</span></span>
-<span><span class="co">##  [1] 0.69015 0.49793 0.18987 0.03731 0.50620 0.04913</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##  [1] 0.0148 0.7032 0.1248 0.6032 0.5228 0.2551</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="merge-data" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="merge-data">
 <span class="header-section-number">3.3</span> Merge data</h2>
@@ -957,6 +952,150 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
